@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\Projects\microchip\KiCAD\FiresportTimer\FiresportTimer.kicad_sch</source>
+    <date>7/2/2023 10:39:07 PM</date>
+    <tool>Eeschema 7.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>FiresportTimer.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="D_GATE_L1">
+      <value>US1M</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds16008.pdf</datasheet>
+      <fields>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Diode" part="US1M" description="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="ki_keywords" value="Ultra Fast"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2837dbc2-cbeb-4bcd-8495-93af690ca3a2</tstamps>
+    </comp>
+    <comp ref="D_GATE_R1">
+      <value>US1M</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds16008.pdf</datasheet>
+      <fields>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Diode" part="US1M" description="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="ki_keywords" value="Ultra Fast"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7ba20e27-a831-427e-b336-1e649980699f</tstamps>
+    </comp>
+    <comp ref="D_OUT_L1">
+      <value>US1M</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds16008.pdf</datasheet>
+      <fields>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Diode" part="US1M" description="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="ki_keywords" value="Ultra Fast"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ffb2a7b9-7789-495e-a9b2-b59443ded6ee</tstamps>
+    </comp>
+    <comp ref="D_OUT_R1">
+      <value>US1M</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds16008.pdf</datasheet>
+      <fields>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <libsource lib="Diode" part="US1M" description="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="Sim.Device" value="D"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)"/>
+      <property name="ki_keywords" value="Ultra Fast"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21c0b411-a540-4586-8bed-bb89dfd2ab2a</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>SQ4917CEY-T1_GE3</value>
+      <footprint>SO-8_VIS</footprint>
+      <datasheet>SQ4917CEY-T1_GE3</datasheet>
+      <libsource lib="SQ4917CEY" part="SQ4917CEY-T1_GE3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_keywords" value="SQ4917CEY-T1_GE3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8ffc0d4-28e2-4bb6-a7e0-46deaf59b2d9</tstamps>
+    </comp>
+    <comp ref="R_PULLUP_L1">
+      <value>4700</value>
+      <footprint>Resistor_SMD:R_2010_5025Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fb5fee34-00cd-4d87-8d2b-1dbda2454856</tstamps>
+    </comp>
+    <comp ref="R_PULLUP_R1">
+      <value>4700</value>
+      <footprint>Resistor_SMD:R_2010_5025Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="FiresportTimer.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>47de79fd-00e8-44f1-b0a5-3c085a4fba3b</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="Conn_01x02_1">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="Conn_01x02_2">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="Conn_01x03_1">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="US1M">
+      <description>1000V, 1A, General Purpose Rectifier Diode, SMA(DO-214AC)</description>
+      <docs>https://www.diodes.com/assets/Datasheets/ds16008.pdf</docs>
+      <footprints>
+        <fp>D*SMA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">US1M</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds16008.pdf</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SQ4917CEY" part="SQ4917CEY-T1_GE3">
+      <docs>SQ4917CEY-T1_GE3</docs>
+      <footprints>
+        <fp>SO-8_VIS</fp>
+        <fp>SO-8_VIS-M</fp>
+        <fp>SO-8_VIS-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">SQ4917CEY-T1_GE3</field>
+        <field name="Footprint">SO-8_VIS</field>
+        <field name="Datasheet">SQ4917CEY-T1_GE3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+        <pin num="3" name="3" type="unspecified"/>
+        <pin num="4" name="4" type="unspecified"/>
+        <pin num="5" name="5" type="unspecified"/>
+        <pin num="6" name="6" type="unspecified"/>
+        <pin num="7" name="7" type="unspecified"/>
+        <pin num="8" name="8" type="unspecified"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="SQ4917CEY">
+      <uri>C:/Users/marti/Downloads/ul_SQ4917CEY-T1-GE3/KiCADv6/2023-06-29_20-43-34.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+12V">
+      <node ref="Q1" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="Q1" pin="3" pinfunction="3" pintype="unspecified"/>
+      <node ref="R_PULLUP_L1" pin="2" pintype="passive"/>
+      <node ref="R_PULLUP_R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="/GATE_L">
+      <node ref="D_GATE_L1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="R_PULLUP_L1" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="/GATE_R">
+      <node ref="D_GATE_R1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="Q1" pin="4" pinfunction="4" pintype="unspecified"/>
+      <node ref="R_PULLUP_R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="/HAL_L">
+      <node ref="D_GATE_L1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D_OUT_L1" pin="1" pinfunction="K" pintype="passive"/>
+    </net>
+    <net code="5" name="/HAL_R">
+      <node ref="D_GATE_R1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D_OUT_R1" pin="1" pinfunction="K" pintype="passive"/>
+    </net>
+    <net code="6" name="/LED_L">
+      <node ref="Q1" pin="7" pinfunction="7" pintype="unspecified"/>
+      <node ref="Q1" pin="8" pinfunction="8" pintype="unspecified"/>
+    </net>
+    <net code="7" name="/LED_R">
+      <node ref="Q1" pin="5" pinfunction="5" pintype="unspecified"/>
+      <node ref="Q1" pin="6" pinfunction="6" pintype="unspecified"/>
+    </net>
+    <net code="8" name="/L_OUT">
+      <node ref="D_OUT_L1" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="9" name="/R_OUT">
+      <node ref="D_OUT_R1" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+  </nets>
+</export>

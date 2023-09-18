@@ -1,0 +1,1 @@
+[{"Name":"arduino_UNO","MCUName":"atmega328p","Programmer":"arduino","BaudRate":115200,"LastUsed":398,"Port":"COM5"},{"Name":"arduino_NANO","MCUName":"atmega328p","Programmer":"arduino","BaudRate":57600,"LastUsed":403,"Port":"COM3"},{"Name":"arduino_MEGA","MCUName":"atmega2560","Programmer":"arduino","BaudRate":115200,"LastUsed":9,"Port":"COM10"}]
