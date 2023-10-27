@@ -44,42 +44,40 @@
 #include <string.h>
 #include <avr/interrupt.h>
 
-void debug(uint8_t value);
+//static void debug(uint8_t value);
 
 //TIMER FUNCTIONS
-void timer_setup();
-void timer_start();
-void timer_stop();
-void timer_reset();
-void timer_left_down();
-void timer_right_down();
-void timer_event();
+static void timer_setup();
+static void timer_start();
+static void timer_stop();
+static void timer_reset();
+static void timer_left_down();
+static void timer_right_down();
+static void timer_event();
 
 //UI FUNCTIONS
-PinConfig* lcd_setup();
-void display_init();
-void update_timer_status();
-void update_target_time();
-void get_time_left(char *str);
-void get_time_right(char *str);
+static PinConfig* lcd_setup();
+static void display_init();
+static void update_timer_status();
+static void update_target_time();
 
 //USART FUNCTIONS
-void usart_setup();
-void usart_command(uint8_t command);
-void usart_write(uint8_t data);
-void usart_write_buffer(uint8_t length);
+static void usart_setup();
+static void usart_command(uint8_t command);
+static void usart_write(uint8_t data);
+static void usart_write_buffer(uint8_t length);
 
-volatile uint32_t time = 0;
-volatile uint32_t left_time = 0;
-volatile uint32_t right_time = 0;
-volatile uint8_t timer_control = 0; //Flags for main loop events
-volatile uint8_t target_status = 0;
-volatile uint8_t last_input_state = 0xFF;
+static volatile uint32_t time = 0;
+static volatile uint32_t left_time = 0;
+static volatile uint32_t right_time = 0;
+static volatile uint8_t timer_control = 0; //Flags for main loop events
+static volatile uint8_t target_status = 0;
+static volatile uint8_t last_input_state = 0xFF;
 
-PinConfig *lcd_config;
-volatile uint8_t *usart_tx_buffer;
-char *left_time_str;
-char *right_time_str;
+static const PinConfig *lcd_config;
+static volatile uint8_t *usart_tx_buffer;
+static char *left_time_str;
+static char *right_time_str;
 
 int main(void)
 {
@@ -103,14 +101,14 @@ int main(void)
 	while(1)
 	{
         if(timer_control) timer_event();
-        if((!(time % 10)) && (PCMSK & ~TIMER_TARGETS) == TIMER_STATUS_RUNNING) update_target_time();
+        if((time & 0x8) && ((PCMSK & ~TIMER_TARGETS) == TIMER_STATUS_RUNNING)) update_target_time();
 	}
 	
 	free(lcd_config);
 	return 0;
 }
 
-void usart_setup()
+static void usart_setup()
 {
     //9600
     UBRR0L = 103;
@@ -122,7 +120,7 @@ void usart_setup()
 }
 
 //START OF UI CODE
-void display_init()
+static void display_init()
 {
     LCD_clear();
 
@@ -135,10 +133,11 @@ void display_init()
     update_timer_status();
 }
 
-void update_target_time()
+static void update_target_time()
 {
-    get_time_left(left_time_str);
-    get_time_right(right_time_str);
+    if(target_status & TIMER_PIN_RIGHT) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
+    if(target_status & TIMER_PIN_LEFT) sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
+    //sprintf(str, "%02d:%02d:%02d", (uint16_t)(time >> 13), (uint16_t)((time >> 7) % 0x0000003F), (uint16_t)(time & 0x0000007F));
 
     LCD_set_cursor(0, 3);
     LCD_write_string(left_time_str);
@@ -147,19 +146,7 @@ void update_target_time()
     LCD_write_string(right_time_str);
 }
 
-void get_time_left(char *str)
-{
-    if(target_status & TIMER_PIN_LEFT) sprintf(str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
-    else sprintf(str, "%02d:%02d:%02d", (uint16_t)(left_time / 6000), (uint16_t)((left_time / 100) % 60), (uint16_t)(left_time % 100));
-}
-
-void get_time_right(char *str)
-{
-    if(target_status & TIMER_PIN_RIGHT) sprintf(str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
-    else sprintf(str, "%02d:%02d:%02d", (uint16_t)(right_time / 6000), (uint16_t)((right_time / 100) % 60), (uint16_t)(right_time % 100));
-}
-
-void update_timer_status()
+static void update_timer_status()
 {
     if (PCMSK == TIMER_STATUS_STOPPED)
     {
@@ -173,9 +160,12 @@ void update_timer_status()
     }
 }
 
-PinConfig* lcd_setup()
+static PinConfig* lcd_setup()
 {
     PinConfig* result = calloc(sizeof(PinConfig), 1);
+    result -> port = &LCD_PORT;
+    result -> ddr = &LCD_DDR;
+
     result -> rs = 4;
     result -> en = 8;
     result -> d0 = 16;
@@ -183,14 +173,11 @@ PinConfig* lcd_setup()
     result -> d2 = 64;
     result -> d3 = 128;
 
-    result -> port = &LCD_PORT;
-    result -> ddr = &LCD_DDR;
-
     return result;
 }
 //END OF UI CODE
 
-void timer_event()
+static void timer_event()
 {
     if(timer_control & TIMER_CONTROL_START)
     {
@@ -226,6 +213,8 @@ void timer_event()
 
         timer_control &= ~TIMER_CONTROL_LEFT_DOWN;
 
+        sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(left_time / 6000), (uint16_t)((left_time / 100) % 60), (uint16_t)(left_time % 100));
+
         if(!(timer_control)) return;
     }
     if(timer_control & TIMER_CONTROL_RIGHT_DOWN)
@@ -235,6 +224,8 @@ void timer_event()
         usart_write_buffer(5);
 
         timer_control &= ~TIMER_CONTROL_RIGHT_DOWN;
+
+        sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(right_time / 6000), (uint16_t)((right_time / 100) % 60), (uint16_t)(right_time % 100));
 
         if(!(timer_control)) return;
     }
@@ -246,7 +237,7 @@ void timer_event()
     }
 }
 
-void timer_setup()
+static void timer_setup()
 {
 	//PINS:
 	CONTROL_DDR = ~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_PIN_LEFT | TIMER_PIN_RIGHT);
@@ -265,7 +256,7 @@ void timer_setup()
     target_status = TIMER_TARGETS;
 }
 
-void timer_start()
+static void timer_start()
 {
     PCMSK = TIMER_STATUS_RUNNING | target_status;
     timer_control |= TIMER_CONTROL_START;
@@ -274,7 +265,7 @@ void timer_start()
 	TIMSK0 |= 0x02;
 }
 
-void timer_stop()
+static void timer_stop()
 {
     //if(~CONTROL_PIN & TIMER_PIN_START) PCMSK = TIMER_PIN_RESET;
     //else PCMSK = TIMER_STATUS_STOPPED;
@@ -286,7 +277,7 @@ void timer_stop()
 	TIMSK0 &= ~0x02;
 }
 
-void timer_reset()
+static void timer_reset()
 {
     if(CONTROL_PIN & TIMER_PIN_LEFT && CONTROL_PIN & TIMER_PIN_RIGHT)
     {
@@ -299,7 +290,7 @@ void timer_reset()
     }
 }
 
-void timer_left_down()
+static void timer_left_down()
 {
     timer_control |= TIMER_CONTROL_LEFT_DOWN;
 	left_time = time;
@@ -309,7 +300,7 @@ void timer_left_down()
     if(!(PCMSK & TIMER_PIN_RIGHT)) timer_stop();
 }
 
-void timer_right_down()
+static void timer_right_down()
 {
     timer_control |= TIMER_CONTROL_RIGHT_DOWN;
     right_time = time;
@@ -346,7 +337,7 @@ ISR(PCINT0_vect)
     last_input_state = CONTROL_PIN;
 }
 
-void usart_command(uint8_t command)
+static void usart_command(uint8_t command)
 {
     switch (command)
     {
@@ -370,13 +361,13 @@ void usart_command(uint8_t command)
     }
 }
 
-void usart_write(uint8_t data)
+static void usart_write(uint8_t data)
 {
     while (!(UCSR0A & (1 << UDRE0)));
     UDR0 = data;
 }
 
-void usart_write_buffer(uint8_t length)
+static void usart_write_buffer(uint8_t length)
 {
     for (int i = 0; i < length; i++)
     {
@@ -408,10 +399,10 @@ ISR(USART_RX_vect)
             break;
     }
 }
-
-void debug(uint8_t value)
+/*
+static void debug(uint8_t value)
 {
     char str[3];
     sprintf(str, "%x|", value);
     LCD_write_string(str);
-}
+}*/
