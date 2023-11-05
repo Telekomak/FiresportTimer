@@ -8,26 +8,25 @@
 #define USART_PACKET_TYPE_STATUS 0xC0
 #define USART_PACKET_TYPE_HELLO 0x00
 
-#define TIMER_PIN_START 2
-#define TIMER_PIN_STOP 4
-#define TIMER_PIN_RESET 1
-#define TIMER_PIN_LEFT 8
-#define TIMER_PIN_RIGHT 16
+#define TIMER_PIN_START 16
+#define TIMER_PIN_STOP 32
+#define TIMER_PIN_RESET 64
 
-#define PCMSK PCMSK0 //Enables interrupt on pins
-#define CONTROL_PORT PORTB
-#define CONTROL_DDR DDRB
-#define CONTROL_PIN PINB
+#define TIMER_PIN_LEFT 4
+#define TIMER_PIN_RIGHT 8
 
-#define LCD_PORT PORTD
-#define LCD_DDR DDRD
+#define PCMSK PCMSK2 //Enables interrupt on pins
+#define CONTROL_PORT PORTD
+#define CONTROL_DDR DDRD
+#define CONTROL_PIN PIND
+
+#define LCD_PORT PORTB
+#define LCD_DDR DDRB
 
 //Status = valid pins for any given situation
 #define TIMER_TARGETS (TIMER_PIN_LEFT | TIMER_PIN_RIGHT)
 #define TIMER_STATUS_RUNNING TIMER_PIN_STOP
 #define TIMER_STATUS_STOPPED (TIMER_PIN_RESET | TIMER_PIN_START)
-//#define TIMER_STATUS_STOPPED TIMER_PIN_RESET
-//#define TIMER_STATUS_RESET TIMER_PIN_START
 
 //Flags for main loop
 #define TIMER_CONTROL_START 1
@@ -51,8 +50,6 @@ static void timer_setup();
 static void timer_start();
 static void timer_stop();
 static void timer_reset();
-static void timer_left_down();
-static void timer_right_down();
 static void timer_event();
 
 //UI FUNCTIONS
@@ -74,8 +71,8 @@ static volatile uint8_t timer_control = 0; //Flags for main loop events
 static volatile uint8_t target_status = 0;
 static volatile uint8_t last_input_state = 0xFF;
 
-static const PinConfig *lcd_config;
-static volatile uint8_t *usart_tx_buffer;
+static PinConfig *lcd_config;
+static uint8_t *usart_tx_buffer;
 static char *left_time_str;
 static char *right_time_str;
 
@@ -101,7 +98,7 @@ int main(void)
 	while(1)
 	{
         if(timer_control) timer_event();
-        if((time & 0x8) && ((PCMSK & ~TIMER_TARGETS) == TIMER_STATUS_RUNNING)) update_target_time();
+        if((time & 0x8) && (PCMSK == TIMER_STATUS_RUNNING)) update_target_time();
 	}
 	
 	free(lcd_config);
@@ -137,7 +134,8 @@ static void update_target_time()
 {
     if(target_status & TIMER_PIN_RIGHT) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
     if(target_status & TIMER_PIN_LEFT) sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(time / 6000), (uint16_t)((time / 100) % 60), (uint16_t)(time % 100));
-    //sprintf(str, "%02d:%02d:%02d", (uint16_t)(time >> 13), (uint16_t)((time >> 7) % 0x0000003F), (uint16_t)(time & 0x0000007F));
+    //Alternative super fast solution:
+    //sprintf(str, "%02d:%02d:%02d", (uint16_t)(time >> 13), (uint16_t)((time >> 7) % 0x3F), (uint16_t)(time & 0x7F));
 
     LCD_set_cursor(0, 3);
     LCD_write_string(left_time_str);
@@ -166,12 +164,12 @@ static PinConfig* lcd_setup()
     result -> port = &LCD_PORT;
     result -> ddr = &LCD_DDR;
 
-    result -> rs = 4;
-    result -> en = 8;
-    result -> d0 = 16;
-    result -> d1 = 32;
-    result -> d2 = 64;
-    result -> d3 = 128;
+    result -> rs = 1;
+    result -> en = 2;
+    result -> d0 = 4;
+    result -> d1 = 8;
+    result -> d2 = 16;
+    result -> d3 = 32;
 
     return result;
 }
@@ -215,6 +213,7 @@ static void timer_event()
 
         sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(left_time / 6000), (uint16_t)((left_time / 100) % 60), (uint16_t)(left_time % 100));
 
+        if (PCMSK == TIMER_STATUS_STOPPED) update_target_time();
         if(!(timer_control)) return;
     }
     if(timer_control & TIMER_CONTROL_RIGHT_DOWN)
@@ -227,6 +226,7 @@ static void timer_event()
 
         sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(right_time / 6000), (uint16_t)((right_time / 100) % 60), (uint16_t)(right_time % 100));
 
+        if (PCMSK == TIMER_STATUS_STOPPED) update_target_time();
         if(!(timer_control)) return;
     }
     if(timer_control & TIMER_CONTROL_USART_WRITE_STATUS)
@@ -239,45 +239,49 @@ static void timer_event()
 
 static void timer_setup()
 {
-	//PINS:
-	CONTROL_DDR = ~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_PIN_LEFT | TIMER_PIN_RIGHT);
-	CONTROL_PORT = TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_PIN_LEFT | TIMER_PIN_RIGHT;
+    //TARGET_PINS
+    EICRA = ISC01 | ISC11;
+    EIMSK = 0;
+
+	//CONTROL PINS:
+	CONTROL_DDR = ~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_TARGETS);
+	CONTROL_PORT = TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_TARGETS;
 
 	//TIMER:
-    //10ms: PSCLR = 1024 | OCR0A = 155
+    //10ms: Prescaler = 1024 | OCR0A = 155
 	TCCR0A = (1 << WGM01);
 	TCCR0B = (1 << CS00) | (1 << CS02);
 	OCR0A = 155;
 	
 	//INTERRUPTS:
-	PCICR = (1 << PCIE0);//enable pin change interrupt 0
-	//PCMSK = TIMER_STATUS_STOPPED;
+	PCICR = (1 << PCIE2);//enable pin change interrupt 2
+
 	PCMSK = TIMER_STATUS_STOPPED;
     target_status = TIMER_TARGETS;
 }
 
-static void timer_start()
+static inline void timer_start()
 {
-    PCMSK = TIMER_STATUS_RUNNING | target_status;
+    PCMSK = TIMER_STATUS_RUNNING;
+    EIMSK = target_status;
     timer_control |= TIMER_CONTROL_START;
 
 	//enable compare match interrupt
 	TIMSK0 |= 0x02;
+
 }
 
-static void timer_stop()
+static inline void timer_stop()
 {
-    //if(~CONTROL_PIN & TIMER_PIN_START) PCMSK = TIMER_PIN_RESET;
-    //else PCMSK = TIMER_STATUS_STOPPED;
     PCMSK = TIMER_STATUS_STOPPED;
-
+    EIMSK = 0;
     timer_control |= TIMER_CONTROL_STOP;
 
 	//disable compare match interrupt
 	TIMSK0 &= ~0x02;
 }
 
-static void timer_reset()
+static inline void timer_reset()
 {
     if(CONTROL_PIN & TIMER_PIN_LEFT && CONTROL_PIN & TIMER_PIN_RIGHT)
     {
@@ -287,34 +291,15 @@ static void timer_reset()
 	    right_time = 0;
 	    left_time = 0;
         PCMSK = TIMER_STATUS_STOPPED;
+        EIMSK = 0;
     }
-}
-
-static void timer_left_down()
-{
-    timer_control |= TIMER_CONTROL_LEFT_DOWN;
-	left_time = time;
-    PCMSK &= ~TIMER_PIN_LEFT;
-    target_status &= ~TIMER_PIN_LEFT;
-
-    if(!(PCMSK & TIMER_PIN_RIGHT)) timer_stop();
-}
-
-static void timer_right_down()
-{
-    timer_control |= TIMER_CONTROL_RIGHT_DOWN;
-    right_time = time;
-    PCMSK &= ~TIMER_PIN_RIGHT;
-    target_status &= ~TIMER_PIN_RIGHT;
-
-    if(!(PCMSK & TIMER_PIN_LEFT)) timer_stop();
 }
 
 ISR(PCINT0_vect)
 {
-    //PCMSK holds valid pins for given status
+    //PCMSK holds valid pins for current status
     //Invert PIN because pullup
-	switch ((~CONTROL_PIN & (PCMSK & ~TIMER_TARGETS)) & last_input_state)
+	switch (((~CONTROL_PIN) & PCMSK) & last_input_state)
 	{
         case TIMER_PIN_START:
             timer_start();
@@ -331,10 +316,7 @@ ISR(PCINT0_vect)
 		default: break;
 	}
 
-    if((~CONTROL_PIN & PCMSK) & TIMER_PIN_LEFT) timer_left_down();
-    if((~CONTROL_PIN & PCMSK) & TIMER_PIN_RIGHT) timer_right_down();
-
-    last_input_state = CONTROL_PIN;
+    //last_input_state = CONTROL_PIN;
 }
 
 static void usart_command(uint8_t command)
@@ -348,7 +330,6 @@ static void usart_command(uint8_t command)
 
         case TIMER_CONTROL_STOP:
             timer_stop();
-            timer_control |= TIMER_CONTROL_STOP;
             return;
 
         case TIMER_CONTROL_RESET:
@@ -398,6 +379,26 @@ ISR(USART_RX_vect)
         default:
             break;
     }
+}
+
+ISR(INT0_vect)
+{
+    EIMSK &= ~TIMER_PIN_LEFT;
+    target_status = EIMSK;
+    left_time = time;
+    timer_control |= TIMER_CONTROL_LEFT_DOWN;
+
+    if(!EIMSK) timer_stop();
+}
+
+ISR(INT1_vect)
+{
+    EIMSK &= ~TIMER_PIN_RIGHT;
+    target_status = EIMSK;
+    right_time = time;
+    timer_control |= TIMER_CONTROL_RIGHT_DOWN;
+
+    if(!EIMSK) timer_stop();
 }
 /*
 static void debug(uint8_t value)
