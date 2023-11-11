@@ -12,8 +12,8 @@
 #define TIMER_PIN_STOP 32
 #define TIMER_PIN_RESET 64
 
-#define TIMER_PIN_LEFT 4
-#define TIMER_PIN_RIGHT 8
+#define TIMER_PIN_LEFT 1
+#define TIMER_PIN_RIGHT 2
 
 #define PCMSK PCMSK2 //Enables interrupt on pins
 #define CONTROL_PORT PORTD
@@ -43,7 +43,7 @@
 #include <string.h>
 #include <avr/interrupt.h>
 
-//static void debug(uint8_t value);
+static void debug(uint8_t value);
 
 //TIMER FUNCTIONS
 static void timer_setup();
@@ -240,12 +240,12 @@ static void timer_event()
 static void timer_setup()
 {
     //TARGET_PINS
-    EICRA = ISC01 | ISC11;
+    EICRA = 1 << ISC01 | 1 << ISC11;
     EIMSK = 0;
 
 	//CONTROL PINS:
-	CONTROL_DDR = ~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_TARGETS);
-	CONTROL_PORT = TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | TIMER_TARGETS;
+	CONTROL_DDR = ~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | (TIMER_TARGETS << 2));
+	CONTROL_PORT = TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | (TIMER_TARGETS << 2);
 
 	//TIMER:
     //10ms: Prescaler = 1024 | OCR0A = 155
@@ -283,7 +283,7 @@ static inline void timer_stop()
 
 static inline void timer_reset()
 {
-    if(CONTROL_PIN & TIMER_PIN_LEFT && CONTROL_PIN & TIMER_PIN_RIGHT)
+    if(CONTROL_PIN & (TIMER_PIN_LEFT << 2) && CONTROL_PIN & (TIMER_PIN_RIGHT << 2))
     {
         target_status = TIMER_TARGETS;
         timer_control |= TIMER_CONTROL_RESET;
@@ -295,7 +295,7 @@ static inline void timer_reset()
     }
 }
 
-ISR(PCINT0_vect)
+ISR(PCINT2_vect)
 {
     //PCMSK holds valid pins for current status
     //Invert PIN because pullup
@@ -316,7 +316,7 @@ ISR(PCINT0_vect)
 		default: break;
 	}
 
-    //last_input_state = CONTROL_PIN;
+    last_input_state = CONTROL_PIN;
 }
 
 static void usart_command(uint8_t command)
@@ -384,6 +384,7 @@ ISR(USART_RX_vect)
 ISR(INT0_vect)
 {
     EIMSK &= ~TIMER_PIN_LEFT;
+    //target_status &= ~TIMER_PIN_LEFT;
     target_status = EIMSK;
     left_time = time;
     timer_control |= TIMER_CONTROL_LEFT_DOWN;
@@ -394,12 +395,14 @@ ISR(INT0_vect)
 ISR(INT1_vect)
 {
     EIMSK &= ~TIMER_PIN_RIGHT;
+    //target_status &= ~TIMER_PIN_RIGHT;
     target_status = EIMSK;
     right_time = time;
     timer_control |= TIMER_CONTROL_RIGHT_DOWN;
 
     if(!EIMSK) timer_stop();
 }
+
 /*
 static void debug(uint8_t value)
 {
