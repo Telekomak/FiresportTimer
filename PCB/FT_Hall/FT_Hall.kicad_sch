@@ -972,7 +972,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2d08f339-a56a-4c13-b3fe-1425b1bb7074")
+		(uuid "2422b833-8a5f-406a-98c3-da2c6a1cc669")
 	)
 	(wire
 		(pts
@@ -1006,7 +1006,17 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 69.85) (xy 72.39 69.85)
+			(xy 72.39 68.58) (xy 72.39 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fa08174-1d5a-4c2d-8d0c-5ed253e86a07")
+	)
+	(wire
+		(pts
+			(xy 69.85 69.85) (xy 77.47 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1033,6 +1043,16 @@
 			(type default)
 		)
 		(uuid "7121c775-4f5e-4bcc-b6f5-410379f8dc94")
+	)
+	(wire
+		(pts
+			(xy 69.85 68.58) (xy 69.85 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78b425a2-68d2-4596-acc6-056a3a7fa60f")
 	)
 	(wire
 		(pts
@@ -1066,7 +1086,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 45.72) (xy 87.63 69.85)
+			(xy 87.63 45.72) (xy 87.63 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1076,23 +1096,13 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 73.66) (xy 72.39 69.85)
+			(xy 72.39 68.58) (xy 87.63 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a7bae923-5fb2-46dd-8aa2-3586b84f2cb8")
-	)
-	(wire
-		(pts
-			(xy 87.63 69.85) (xy 77.47 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b922e5b4-668b-4eac-abd6-f69f96d70064")
+		(uuid "a2abfa5d-8cbb-4462-b77a-39712774545b")
 	)
 	(wire
 		(pts
@@ -1203,7 +1213,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 71.12 44.7548 0)
 			(effects
 				(font
@@ -1270,7 +1280,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 86.36 44.7548 0)
 			(effects
 				(font
@@ -1547,7 +1557,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 60.452 57.15 90)
 			(effects
 				(font
@@ -1591,7 +1601,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 69.85 69.85 0)
+		(at 69.85 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1600,7 +1610,7 @@
 		(fields_autoplaced yes)
 		(uuid "f4484c1f-ccdf-4ec3-971c-f48cb25b7ca2")
 		(property "Reference" "#PWR01"
-			(at 69.85 73.66 0)
+			(at 69.85 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1609,7 +1619,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 69.85 64.77 0)
+			(at 69.85 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1617,7 +1627,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 69.85 0)
+			(at 69.85 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1626,7 +1636,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 69.85 0)
+			(at 69.85 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1635,7 +1645,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 69.85 69.85 0)
+			(at 69.85 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)

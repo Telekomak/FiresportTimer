@@ -608,169 +608,6 @@
 				)
 			)
 		)
-		(symbol "Device:D"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -1196,231 +1033,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Switch:SW_DIP_x02"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_DIP_x02"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "dip switch"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SW?DIP?x2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_DIP_x02_0_0"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0.127) (xy 2.3622 1.1684)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 2.667) (xy 2.3622 3.7084)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_DIP_x02_0_1"
-				(rectangle
-					(start -3.81 5.08)
-					(end 3.81 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SW_DIP_x02_1_1"
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1949,12 +1561,6 @@
 		(uuid "318a72af-c571-41ae-bf2d-ecde9d6ab56c")
 	)
 	(junction
-		(at 46.99 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "32f1b7be-4ddc-4c8b-8257-417812526966")
-	)
-	(junction
 		(at 92.71 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1965,12 +1571,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "59917551-f885-4155-9e3f-eda70bf7b97c")
-	)
-	(junction
-		(at 71.12 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5bada468-40d6-450d-be9a-211cdce81856")
 	)
 	(junction
 		(at 80.01 111.76)
@@ -1991,22 +1591,10 @@
 		(uuid "c46227f0-7b82-4d17-941f-8f6483d8ee1c")
 	)
 	(junction
-		(at 44.45 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e257a675-cd26-42f8-9c21-235d484d5b40")
-	)
-	(junction
 		(at 68.58 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f7db38f1-cd31-416f-8213-c7fcbb08227e")
-	)
-	(junction
-		(at 68.58 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb9c16ac-6add-4c7f-888a-66979d03fb0d")
 	)
 	(wire
 		(pts
@@ -2037,16 +1625,6 @@
 			(type default)
 		)
 		(uuid "057fa8cc-cca2-456a-aa77-e46b48f98b8e")
-	)
-	(wire
-		(pts
-			(xy 46.99 97.79) (xy 46.99 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "091675c4-6268-47c7-9a1a-b3616b0189b8")
 	)
 	(wire
 		(pts
@@ -2090,6 +1668,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 99.06) (xy 85.09 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2eef1a34-dc57-4880-a93f-81b13c7173f1")
+	)
+	(wire
+		(pts
 			(xy 68.58 113.03) (xy 80.01 113.03)
 		)
 		(stroke
@@ -2130,26 +1718,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 87.63) (xy 71.12 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67a13897-e0d2-4721-89dd-480b9bd87054")
-	)
-	(wire
-		(pts
-			(xy 44.45 85.09) (xy 44.45 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "694928a1-64e5-4f93-9af2-11fd479e6f74")
-	)
-	(wire
-		(pts
 			(xy 87.63 115.57) (xy 87.63 111.76)
 		)
 		(stroke
@@ -2180,17 +1748,17 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 97.79) (xy 46.99 97.79)
+			(xy 71.12 105.41) (xy 71.12 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "75b50272-67a2-4c62-9b51-ea0b52ce8dfd")
+		(uuid "79776a33-970d-4b7f-a988-d02bc2d5b85f")
 	)
 	(wire
 		(pts
-			(xy 85.09 97.79) (xy 85.09 96.52)
+			(xy 85.09 99.06) (xy 85.09 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2200,27 +1768,17 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 97.79) (xy 74.93 97.79)
+			(xy 46.99 105.41) (xy 71.12 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "814c1940-cb12-4c30-9061-80f52afc0c35")
+		(uuid "8c0cfebb-83cb-4d0f-96de-3aceeede31ec")
 	)
 	(wire
 		(pts
-			(xy 71.12 100.33) (xy 71.12 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89412e82-99d2-43d1-9f50-d4cddb7a8358")
-	)
-	(wire
-		(pts
-			(xy 80.01 110.49) (xy 80.01 111.76)
+			(xy 80.01 109.22) (xy 80.01 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2230,13 +1788,13 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 97.79) (xy 68.58 97.79)
+			(xy 46.99 105.41) (xy 46.99 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "955c6771-b96a-4178-87bd-b5a38bf40084")
+		(uuid "9325fb96-db66-406c-ad92-95fdf1bcc016")
 	)
 	(wire
 		(pts
@@ -2310,33 +1868,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 100.33) (xy 44.45 100.33)
+			(xy 44.45 99.06) (xy 44.45 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b26b0c74-37f6-4709-9a3c-b123b8647b23")
-	)
-	(wire
-		(pts
-			(xy 64.77 100.33) (xy 71.12 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "befb0c76-deac-4b94-b994-2bdf97b5ab2b")
-	)
-	(wire
-		(pts
-			(xy 49.53 85.09) (xy 44.45 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6453567-cc89-4ea3-a629-e89dd6fb6ff9")
+		(uuid "bcf655b8-e8cb-4b5f-9dde-e6cc49498e8e")
 	)
 	(wire
 		(pts
@@ -2347,76 +1885,6 @@
 			(type default)
 		)
 		(uuid "d7eba4e6-7755-48fe-9e92-8d9858c7e20d")
-	)
-	(wire
-		(pts
-			(xy 64.77 85.09) (xy 68.58 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8e6115a-4c1e-45e7-8ff4-7df24c63da21")
-	)
-	(wire
-		(pts
-			(xy 82.55 97.79) (xy 85.09 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9663b1f-9f17-4cb5-8b80-640b75e32a1a")
-	)
-	(wire
-		(pts
-			(xy 44.45 100.33) (xy 44.45 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e307b7d3-261b-42e8-9b02-d534f214beea")
-	)
-	(wire
-		(pts
-			(xy 49.53 87.63) (xy 46.99 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5505ffc-6200-4669-bda7-f7f015cd1ad5")
-	)
-	(wire
-		(pts
-			(xy 71.12 110.49) (xy 71.12 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e711ffcc-f54b-4546-8688-f959d2d3b557")
-	)
-	(wire
-		(pts
-			(xy 68.58 85.09) (xy 68.58 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8a3c0a0-1cf4-469c-ad4b-2dc9c903cd2c")
-	)
-	(wire
-		(pts
-			(xy 46.99 87.63) (xy 46.99 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb1fb337-ba8b-49f4-8984-a29e19949880")
 	)
 	(wire
 		(pts
@@ -2448,16 +1916,6 @@
 		)
 		(uuid "fead784d-6a41-4083-a821-b2859494864f")
 	)
-	(wire
-		(pts
-			(xy 71.12 87.63) (xy 71.12 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffd1d94b-239a-4b7b-9d32-f7adf33afa0d")
-	)
 	(label "PASTRHRU_IN"
 		(at 71.12 115.57 0)
 		(fields_autoplaced yes)
@@ -2469,19 +1927,8 @@
 		)
 		(uuid "5509518c-6d68-485d-995c-361af8965aa9")
 	)
-	(label "OUT"
-		(at 72.39 97.79 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8514601f-412f-461e-a6f3-32c6562312bf")
-	)
 	(label "Q_UOT_DRAIN"
-		(at 85.09 97.79 270)
+		(at 85.09 99.06 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2491,14 +1938,14 @@
 		)
 		(uuid "a8e08cab-75ef-4d33-931d-ad7cd8dc1ced")
 	)
-	(label "R_OUT"
-		(at 46.99 109.22 90)
+	(label "PASSTHRU_OUT"
+		(at 62.23 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "ad2a9b89-ff51-4430-b2bc-6484fb384cda")
 	)
@@ -2513,7 +1960,7 @@
 		)
 		(uuid "c05bb323-4afa-4cc1-9579-3b51f799e20f")
 	)
-	(label "L_OUT"
+	(label "OUT"
 		(at 44.45 109.22 90)
 		(fields_autoplaced yes)
 		(effects
@@ -2523,17 +1970,6 @@
 			(justify left bottom)
 		)
 		(uuid "df0e1f39-73f3-4dce-8614-6d6e8adb6e03")
-	)
-	(label "PASTHRU_OUT"
-		(at 69.85 87.63 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f61902b1-113f-4205-8a6d-6e74b93f62a3")
 	)
 	(label "HAL_IN"
 		(at 92.71 105.41 90)
@@ -2573,7 +2009,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 90.932 83.82 90)
 			(effects
 				(font
@@ -2610,80 +2046,6 @@
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
 					(reference "R_PUP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_DIP_x02")
-		(at 57.15 97.79 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1cb8113a-d045-435d-a37d-116bb1708b2d")
-		(property "Reference" "SW_R1"
-			(at 57.15 93.218 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_DIP_x02"
-			(at 57.15 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm"
-			(at 57.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/4/632-002/dsh.632-002.1.pdf"
-			(at 57.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-			(at 57.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "af5690e2-ef75-4e56-a255-20fc831e047b")
-		)
-		(pin "1"
-			(uuid "d9c4c48c-b690-4072-82ea-cc3ba86b89c3")
-		)
-		(pin "4"
-			(uuid "614af3ae-7ce6-4c97-8ded-9c4680a401c2")
-		)
-		(pin "2"
-			(uuid "6e7c741c-85ae-408a-bbff-bb14e71c1813")
-		)
-		(instances
-			(project "FT_TargetSwitch"
-				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "SW_R1")
 					(unit 1)
 				)
 			)
@@ -3040,92 +2402,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 78.74 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a4676158-8756-4a61-a45a-bbcd62ae5dbd")
-		(property "Reference" "D1"
-			(at 78.74 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "M7"
-			(at 78.74 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
-			(at 78.74 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2303141030_MDD-Microdiode-Electronics-M7_C95872.pdf"
-			(at 78.74 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 78.74 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 78.74 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 78.74 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca3c8ec3-3f6f-4d24-bb26-12a1852d7b86")
-		)
-		(pin "2"
-			(uuid "5d12c402-bb89-44fd-8fa9-f1c0a9324d4f")
-		)
-		(instances
-			(project "FT_TargetSwitch"
-				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:IRLML5203")
 		(at 87.63 91.44 180)
 		(unit 1)
@@ -3195,80 +2471,6 @@
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
 					(reference "Q_OUT1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_DIP_x02")
-		(at 57.15 85.09 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c2d1144d-7b14-4ccd-be1b-9532d0d544de")
-		(property "Reference" "SW_L1"
-			(at 57.15 80.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_DIP_x02"
-			(at 57.15 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm"
-			(at 57.15 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/4/632-002/dsh.632-002.1.pdf"
-			(at 57.15 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-			(at 57.15 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e88308b9-b9c6-424d-bdf7-94f641be7ec8")
-		)
-		(pin "1"
-			(uuid "34bea983-d2d0-4256-b04d-508512827541")
-		)
-		(pin "4"
-			(uuid "933b90a0-6fce-4056-b385-99067806f08b")
-		)
-		(pin "2"
-			(uuid "4c7f0771-56b2-4bc8-aa1b-522c95c2a7c3")
-		)
-		(instances
-			(project "FT_TargetSwitch"
-				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "SW_L1")
 					(unit 1)
 				)
 			)
@@ -3445,96 +2647,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 71.12 106.68 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d02a2458-3c57-4b46-83cb-71c524ddd294")
-		(property "Reference" "D2"
-			(at 72.644 106.68 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "M7"
-			(at 73.66 107.9499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
-			(at 71.12 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2303141030_MDD-Microdiode-Electronics-M7_C95872.pdf"
-			(at 71.12 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 71.12 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 71.12 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 71.12 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9427e132-49de-4bc0-a81a-f70dea9ebd61")
-		)
-		(pin "1"
-			(uuid "80b8b20c-2aee-48ca-addc-b4c9889a1427")
-		)
-		(instances
-			(project "FT_TargetSwitch"
-				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
-		(at 80.01 110.49 0)
+		(at 80.01 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3543,7 +2657,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3f8c28b-ecf1-42c6-ac3e-98c098705bcc")
 		(property "Reference" "#PWR01"
-			(at 80.01 114.3 0)
+			(at 80.01 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3552,7 +2666,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 80.01 105.41 0)
+			(at 80.01 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3560,7 +2674,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 110.49 0)
+			(at 80.01 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3569,7 +2683,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 110.49 0)
+			(at 80.01 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3578,7 +2692,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 80.01 110.49 0)
+			(at 80.01 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
