@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "74HC3G14DP,125")(type "KiCad")(uri "${KIPRJMOD}/74HC3G14DP,125.kicad_sym")(options "")(descr ""))
+)
