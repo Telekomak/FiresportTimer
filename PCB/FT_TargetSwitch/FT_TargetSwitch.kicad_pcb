@@ -117,7 +117,7 @@
 		(at 121.158 114.554 -90)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
-		(property "Reference" "Q_OUT1"
+		(property "Reference" "Q1"
 			(at 2.794 1.016 180)
 			(layer "F.SilkS")
 			(hide yes)
@@ -379,7 +379,7 @@
 		(at 134.371 127.197 -90)
 		(descr "Through hole angled pin header, 1x02, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x02 2.54mm single row")
-		(property "Reference" "CON_LED1"
+		(property "Reference" "CON4"
 			(at 4.375 7.625 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -935,7 +935,7 @@
 		(at 118.364 114.3 -90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R_PUP1"
+		(property "Reference" "R1"
 			(at 0 1.524 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -1143,8 +1143,8 @@
 		(at 107.203 114.103 90)
 		(descr "Through hole angled pin header, 1x03, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x03 2.54mm single row")
-		(property "Reference" "CON_PASTHRU1"
-			(at 4.375 -3.81 270)
+		(property "Reference" "CON2"
+			(at 4.375 -3.81 -90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "df4b81b9-e911-4b08-b184-ac12465cc447")
@@ -1156,7 +1156,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 4.385 7.35 270)
+			(at 4.385 7.35 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "191edfc8-f339-4102-b569-60646ed4778d")
@@ -1769,7 +1769,7 @@
 			(uuid "6f2c4354-1b7c-4d17-a07d-da499d0b9d13")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.77 2.54 360)
+			(at 2.77 2.54 0)
 			(layer "F.Fab")
 			(uuid "2b8a0cb1-5163-4ff0-b0e0-087d443f3344")
 			(effects
@@ -1830,7 +1830,7 @@
 		(at 119.888 123.2 -90)
 		(descr "TO-252/DPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-1/")
 		(tags "DPAK TO-252 DPAK-3 TO-252-3 SOT-428")
-		(property "Reference" "Q_LED1"
+		(property "Reference" "Q1"
 			(at 5.578 0.254 180)
 			(layer "F.SilkS")
 			(hide yes)
@@ -2261,8 +2261,8 @@
 		(at 126.756 114.103 90)
 		(descr "Through hole angled pin header, 1x04, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x04 2.54mm single row")
-		(property "Reference" "CON_IO1"
-			(at 4.375 10.15 270)
+		(property "Reference" "CON1"
+			(at 4.375 10.15 -90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "75274aea-a74b-4181-8145-214414bc13fc")
@@ -2274,7 +2274,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Pin"
-			(at 4.385 9.89 270)
+			(at 4.385 9.89 -90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "43c0e609-ddea-4fd7-b08e-22939b56eb8e")
@@ -3007,7 +3007,7 @@
 			(uuid "5c63058b-8ec4-4b40-b831-71b0ae7c1a0c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.77 3.81 360)
+			(at 2.77 3.81 0)
 			(layer "F.Fab")
 			(uuid "c4078f6d-6127-4b5a-a9dd-a0d8bf6358e2")
 			(effects
@@ -3079,7 +3079,7 @@
 		(at 112.268 127 -90)
 		(descr "Through hole angled pin header, 1x03, 2.54mm pitch, 6mm pin length, single row")
 		(tags "Through hole angled pin header THT 1x03 2.54mm single row")
-		(property "Reference" "CON_HAL1"
+		(property "Reference" "CON3"
 			(at 4.375 -3.825 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -4748,7 +4748,7 @@
 		)
 		(polygon
 			(pts
-				(xy 99.695 99.695) (xy 140.335 99.695) (xy 140.335 140.335) (xy 99.695 140.335)
+				(xy 100 100) (xy 140 100) (xy 140 140) (xy 100 140)
 			)
 		)
 		(filled_polygon
