@@ -330,7 +330,7 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
+		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -344,8 +344,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -370,7 +370,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -397,7 +397,18 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x03_1_1"
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
@@ -433,7 +444,7 @@
 				)
 				(rectangle
 					(start -1.27 3.81)
-					(end 1.27 -3.81)
+					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -489,6 +500,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -596,24 +625,20 @@
 		)
 	)
 	(junction
-		(at 90.17 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d9f2d24-6982-4bdf-8821-2c7185006b30")
-	)
-	(junction
 		(at 90.17 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c0e63a9-bed2-47fe-9396-d40bd8ead700")
 	)
-	(no_connect
-		(at 106.68 83.82)
-		(uuid "f478acb7-fa03-4d73-a1bc-a9e0487ac22d")
+	(junction
+		(at 90.17 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ca8d2b0f-6fd8-44c3-aadb-1b2d0a9aea4d")
 	)
 	(wire
 		(pts
-			(xy 101.6 83.82) (xy 101.6 85.09)
+			(xy 101.6 83.82) (xy 101.6 91.44)
 		)
 		(stroke
 			(width 0)
@@ -623,47 +648,17 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 86.36) (xy 101.6 86.36)
+			(xy 90.17 87.63) (xy 90.17 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c461bee-91a9-4730-895d-885e50636a82")
+		(uuid "32ff9600-1bc7-4fa6-99b4-046f71740a36")
 	)
 	(wire
 		(pts
-			(xy 99.06 88.9) (xy 99.06 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d8b3804-6998-4066-a431-9ef8b5387c01")
-	)
-	(wire
-		(pts
-			(xy 101.6 86.36) (xy 101.6 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23e7d4ea-1253-47ee-b759-b020d52ae8f3")
-	)
-	(wire
-		(pts
-			(xy 101.6 85.09) (xy 100.33 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34edd8e1-336b-45b6-b243-7ad4821f95c9")
-	)
-	(wire
-		(pts
-			(xy 90.17 76.2) (xy 90.17 90.17)
+			(xy 90.17 76.2) (xy 90.17 87.63)
 		)
 		(stroke
 			(width 0)
@@ -693,17 +688,27 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 83.82) (xy 99.06 86.36)
+			(xy 96.52 87.63) (xy 96.52 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "74adf9f8-aa33-4cb3-a892-dda2a3a7a7a1")
+		(uuid "883c45e3-bbe1-4fe1-8f4b-100ab1afd30f")
 	)
 	(wire
 		(pts
-			(xy 90.17 90.17) (xy 96.52 90.17)
+			(xy 104.14 91.44) (xy 104.14 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aab4be0b-2462-4ca1-bf8e-019a1a2e87b4")
+	)
+	(wire
+		(pts
+			(xy 90.17 87.63) (xy 96.52 87.63)
 		)
 		(stroke
 			(width 0)
@@ -713,13 +718,13 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 88.9) (xy 99.06 88.9)
+			(xy 99.06 83.82) (xy 99.06 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bf7ed3f9-beb5-4b17-a024-35005621aaf9")
+		(uuid "b8136ea0-9834-443c-ae83-f5d4ab74a3b3")
 	)
 	(wire
 		(pts
@@ -733,17 +738,39 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 85.09) (xy 100.33 88.9)
+			(xy 104.14 83.82) (xy 106.68 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ffc67709-3651-45bc-a078-968857459211")
+		(uuid "ec7640ee-6245-4a86-8bd7-0784da144e9d")
+	)
+	(label "USB_D-"
+		(at 99.06 91.44 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c61bcbb-7cd3-4826-902b-aefa8af74ff2")
+	)
+	(label "USB_D+"
+		(at 101.6 91.44 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a25251b1-d80a-443a-bdbb-43345aa04188")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 90.17 0)
+		(at 90.17 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -752,7 +779,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c9259d4-84b8-4fed-961e-3e03089e6542")
 		(property "Reference" "#PWR01"
-			(at 90.17 96.52 0)
+			(at 90.17 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -761,7 +788,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 95.25 0)
+			(at 90.17 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -769,7 +796,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 90.17 0)
+			(at 90.17 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -778,7 +805,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 90.17 0)
+			(at 90.17 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -787,7 +814,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 90.17 0)
+			(at 90.17 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -802,115 +829,6 @@
 			(project "FT_USB"
 				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 99.06 95.25 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "499d76a5-da3f-4b26-a064-646f4743b862")
-		(property "Reference" "CON2"
-			(at 104.14 93.9799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x03"
-			(at 104.14 96.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-164/dsh.800-164.1.pdf"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Assemble" "NO"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "GME"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier no." "800-164"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.gme.cz/v/1497964/kls-psh02-03pg-konektor-vidlice-roztec-254mm-1x3piny-prima-do-dps"
-			(at 99.06 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4f6f8bf0-e2b3-4afd-9f8e-114779fdfa8b")
-		)
-		(pin "3"
-			(uuid "02637b55-f9d0-47cf-9a21-29e8857b2864")
-		)
-		(pin "2"
-			(uuid "e477873c-d851-493f-a8b8-8c49fc434c8c")
-		)
-		(instances
-			(project "FT_USB"
-				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
-					(reference "CON2")
 					(unit 1)
 				)
 			)
@@ -1007,6 +925,15 @@
 				(hide yes)
 			)
 		)
+		(property "Accept alternative part" "~"
+			(at 101.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "5486d221-291a-4cdd-bd6c-4be049b2812c")
 		)
@@ -1026,6 +953,125 @@
 			(project "FT_USB"
 				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
 					(reference "CON1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 101.6 96.52 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f11d6277-5427-4b41-8a9d-92a656caf669")
+		(property "Reference" "J1"
+			(at 100.33 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 100.33 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-170/dsh.800-170.1.pdf"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assemble" "NO"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "GME"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier no." "800-170"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.gme.cz/v/1497969/kls-psh02-04pg-konektor-vidlice-roztec-254mm-1x4piny-prima-do-dps"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a1d79ea-33cf-46b4-9dfd-024c0984163f")
+		)
+		(pin "3"
+			(uuid "9bc7925d-2d35-490c-8f88-8666148f4195")
+		)
+		(pin "4"
+			(uuid "180db3da-dc5f-46b3-a795-123e67aaa6d8")
+		)
+		(pin "2"
+			(uuid "fc1c3199-bdc6-4dc5-9744-7d167b803a44")
+		)
+		(instances
+			(project "FT_USB"
+				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
+					(reference "J1")
 					(unit 1)
 				)
 			)

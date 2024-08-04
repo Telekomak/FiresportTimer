@@ -591,7 +591,7 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -628,6 +628,12 @@
           "label": "Assemble",
           "name": "Assemble",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Accept alternative part",
+          "name": "Accept alternative part",
+          "show": false
         }
       ],
       "filter_string": "",

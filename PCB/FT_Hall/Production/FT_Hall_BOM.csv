@@ -1,0 +1,5 @@
+"Reference","Value","Datasheet","Footprint","Qty","Assembly","Supplier","URL","Supplier no.","Accept alternative part"
+"C1,C2","4.7nF, 25V","~","Capacitor_SMD:C_0603_1608Metric","2","YES","PCBWAY","~","~","~"
+"CON1","Conn_01x03_Pin","~","SMD_3_PADS:3_SMD_PADS","1","NO","~","~","~","~"
+"HAL1","TLV4906K","https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Infineon-Technologies-TLV4906K_C126637.pdf","Package_TO_SOT_SMD:SOT-23","1","YES","LCSC","https://www.lcsc.com/product-detail/Hall-Switches_Infineon-Technologies-TLV4906K_C126637.html","C126637","NO"
+"R1","200R","~","Resistor_SMD:R_0603_1608Metric","1","YES","PCBWAY","~","~","~"
