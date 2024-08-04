@@ -99,9 +99,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "Production/Drill/")
 		)
 	)
 	(net 0 "")
@@ -112,7 +112,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "083619f5-978b-469c-a7bf-234ace56bca0")
-		(at 136.144 73.66 90)
+		(at 106.54 107.214 90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
@@ -375,7 +375,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "396d01c1-5ff7-4b35-80be-db575bd09b04")
-		(at 133.604 80.01 -90)
+		(at 104 113.564 -90)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "HAL1"
@@ -413,7 +413,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Infineon-Technologies-TLV4906K_C126637.pdf"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -450,7 +450,7 @@
 				)
 			)
 		)
-		(property "Supplier" ""
+		(property "Supplier" "LCSC"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -463,7 +463,7 @@
 				)
 			)
 		)
-		(property "Supplier no." ""
+		(property "Supplier no." "C126637"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -476,7 +476,7 @@
 				)
 			)
 		)
-		(property "URL" ""
+		(property "URL" "https://www.lcsc.com/product-detail/Hall-Switches_Infineon-Technologies-TLV4906K_C126637.html"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -691,7 +691,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "5e95c3bf-b0b5-4088-806d-3c9dc1f659f5")
-		(at 131.826 76.2 180)
+		(at 102.222 109.754 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C2"
@@ -705,7 +705,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7nF"
+		(property "Value" "4.7nF, 25V"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -729,7 +729,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-CC0603KRX7R8BB472_C505480.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -766,7 +766,7 @@
 				)
 			)
 		)
-		(property "Supplier" "PCBWAY"
+		(property "Supplier" "LCSC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -779,7 +779,7 @@
 				)
 			)
 		)
-		(property "Supplier no." ""
+		(property "Supplier no." "C505480"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -792,7 +792,7 @@
 				)
 			)
 		)
-		(property "URL" ""
+		(property "URL" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R8BB472_C505480.html"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -954,7 +954,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "7afc70eb-9b96-4389-83ad-9eeefa9474bd")
-		(at 135.382 76.2 180)
+		(at 105.778 109.754 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C1"
@@ -968,7 +968,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7nF"
+		(property "Value" "4.7nF, 25V"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -992,7 +992,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-CC0603KRX7R8BB472_C505480.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1029,7 +1029,7 @@
 				)
 			)
 		)
-		(property "Supplier" "PCBWAY"
+		(property "Supplier" "LCSC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1042,7 +1042,7 @@
 				)
 			)
 		)
-		(property "Supplier no." ""
+		(property "Supplier no." "C505480"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1055,7 +1055,7 @@
 				)
 			)
 		)
-		(property "URL" ""
+		(property "URL" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R8BB472_C505480.html"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1217,7 +1217,7 @@
 	(footprint "SMD_3_PADS:3_SMD_PADS"
 		(layer "F.Cu")
 		(uuid "9ed830fc-43a4-42b1-b1b1-649ea9aedc45")
-		(at 133.604 68.58)
+		(at 104 102.134)
 		(property "Reference" "CON1"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -1387,10 +1387,10 @@
 		)
 	)
 	(gr_rect
-		(start 129.54 66.675)
-		(end 137.54 83.675)
+		(start 100 100)
+		(end 108 117)
 		(stroke
-			(width 0.2)
+			(width 0.05)
 			(type default)
 		)
 		(fill none)
@@ -1398,7 +1398,7 @@
 		(uuid "5c5014a5-6592-4b00-9538-b61456996387")
 	)
 	(gr_text "Firesport timer\nHall switch\nMartin Vejman\nv1"
-		(at 136.652 67.564 90)
+		(at 107.048 101.118 90)
 		(layer "B.SilkS")
 		(uuid "6daccd59-35d7-4033-98ec-07c0295b2402")
 		(effects
@@ -1411,7 +1411,7 @@
 		)
 	)
 	(gr_text "Q  -  +"
-		(at 133.604 71.628 0)
+		(at 104 105.182 0)
 		(layer "F.SilkS")
 		(uuid "bc20422e-242a-4545-ac4e-f27ae6b0a76d")
 		(effects
@@ -1424,112 +1424,112 @@
 		)
 	)
 	(segment
-		(start 136.144 76.187)
-		(end 136.157 76.2)
+		(start 106.54 109.741)
+		(end 106.553 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "0f287384-7646-4094-b3d9-70f4dac8bd85")
 	)
 	(segment
-		(start 136.144 74.485)
-		(end 136.144 76.187)
+		(start 106.54 108.039)
+		(end 106.54 109.741)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "53a25d08-0ac3-4c4b-88e4-bf1137ac923f")
 	)
 	(segment
-		(start 134.554 77.803)
-		(end 136.157 76.2)
+		(start 104.95 111.357)
+		(end 106.553 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "9029ea6b-c1e1-44cd-876e-b04c51bec31e")
 	)
 	(segment
-		(start 134.554 78.51)
-		(end 134.554 77.803)
+		(start 104.95 112.064)
+		(end 104.95 111.357)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "bba4bb7a-93d2-48c4-8d3e-7e243341fcc5")
 	)
 	(segment
-		(start 132.601 76.2)
-		(end 133.604 76.2)
+		(start 102.997 109.754)
+		(end 104 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "8732a8d2-295b-4d3e-aa71-b3940d8b66b9")
 	)
 	(segment
-		(start 133.604 76.2)
-		(end 133.604 81.51)
+		(start 104 109.754)
+		(end 104 115.064)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "a9e3ad09-bbad-437c-8386-9825b523c64c")
 	)
 	(segment
-		(start 133.604 68.58)
-		(end 133.604 75.946)
+		(start 104 102.134)
+		(end 104 109.5)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "ad111613-88b4-4927-bda1-2016f08643ef")
 	)
 	(segment
-		(start 134.607 76.2)
-		(end 133.604 76.2)
+		(start 105.003 109.754)
+		(end 104 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "bd33a010-1985-47ee-9697-1e65815eddb6")
 	)
 	(segment
-		(start 133.604 75.946)
-		(end 133.604 76.2)
+		(start 104 109.5)
+		(end 104 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "f6c775f8-3f79-4600-8c45-e9e16e470849")
 	)
 	(segment
-		(start 132.654 78.51)
-		(end 132.654 77.803)
+		(start 103.05 112.064)
+		(end 103.05 111.357)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "0c52eb8f-232a-4b9f-af8d-49a5437cd8b8")
 	)
 	(segment
-		(start 131.064 76.187)
-		(end 131.051 76.2)
+		(start 101.46 109.741)
+		(end 101.447 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "50807a43-cd0e-48d6-9358-13eda768ffd8")
 	)
 	(segment
-		(start 132.654 77.803)
-		(end 131.051 76.2)
+		(start 103.05 111.357)
+		(end 101.447 109.754)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "51ab6e56-89e5-4d14-8e4d-6840f831dab1")
 	)
 	(segment
-		(start 131.064 68.58)
-		(end 131.064 76.187)
+		(start 101.46 102.134)
+		(end 101.46 109.741)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "8669a5c4-de10-42f7-9e73-864104d5588b")
 	)
 	(segment
-		(start 136.144 68.58)
-		(end 136.144 72.835)
+		(start 106.54 102.134)
+		(end 106.54 106.389)
 		(width 0.508)
 		(layer "F.Cu")
 		(net 4)
@@ -1552,16 +1552,16 @@
 		)
 		(polygon
 			(pts
-				(xy 129.54 66.548) (xy 137.668 66.548) (xy 137.668 83.82) (xy 129.54 83.82)
+				(xy 100 100) (xy 108 100) (xy 108 117) (xy 100 117)
 			)
 		)
 		(filled_polygon
 			(layer "B.Cu")
 			(pts
-				(xy 137.483039 66.694685) (xy 137.528794 66.747489) (xy 137.54 66.799) (xy 137.54 83.551) (xy 137.520315 83.618039)
-				(xy 137.467511 83.663794) (xy 137.416 83.675) (xy 129.664 83.675) (xy 129.596961 83.655315) (xy 129.551206 83.602511)
-				(xy 129.54 83.551) (xy 129.54 66.799) (xy 129.559685 66.731961) (xy 129.612489 66.686206) (xy 129.664 66.675)
-				(xy 137.416 66.675)
+				(xy 107.943039 100.019685) (xy 107.988794 100.072489) (xy 108 100.124) (xy 108 116.876) (xy 107.980315 116.943039)
+				(xy 107.927511 116.988794) (xy 107.876 117) (xy 100.124 117) (xy 100.056961 116.980315) (xy 100.011206 116.927511)
+				(xy 100 116.876) (xy 100 100.124) (xy 100.019685 100.056961) (xy 100.072489 100.011206) (xy 100.124 100)
+				(xy 107.876 100)
 			)
 		)
 	)

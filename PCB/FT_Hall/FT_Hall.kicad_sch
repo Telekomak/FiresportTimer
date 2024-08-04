@@ -1205,7 +1205,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7nF"
+		(property "Value" "4.7nF, 25V"
 			(at 67.31 52.07 90)
 			(effects
 				(font
@@ -1276,6 +1276,15 @@
 				(hide yes)
 			)
 		)
+		(property "Accept alternative part" "~"
+			(at 67.31 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0f92a5e8-dbbe-4441-98ad-0323c055c9f7")
 		)
@@ -1308,7 +1317,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7nF"
+		(property "Value" "4.7nF, 25V"
 			(at 82.55 52.07 90)
 			(effects
 				(font
@@ -1371,6 +1380,15 @@
 			)
 		)
 		(property "URL" "~"
+			(at 82.55 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
 			(at 82.55 45.72 0)
 			(effects
 				(font
@@ -1475,6 +1493,15 @@
 			)
 		)
 		(property "URL" "https://www.lcsc.com/product-detail/Hall-Switches_Infineon-Technologies-TLV4906K_C126637.html"
+			(at 67.31 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "NO"
 			(at 67.31 27.94 0)
 			(effects
 				(font
@@ -1656,6 +1683,15 @@
 				(hide yes)
 			)
 		)
+		(property "Accept alternative part" "~"
+			(at 74.93 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cedc28d3-266e-410d-9bfc-ff5cf73f4d38")
 		)
@@ -1757,6 +1793,15 @@
 			)
 		)
 		(property "URL" "~"
+			(at 62.23 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
 			(at 62.23 57.15 0)
 			(effects
 				(font

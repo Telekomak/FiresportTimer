@@ -532,8 +532,8 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
-      "pos_files": "",
+      "plot": "Production/Gerber/",
+      "pos_files": "Production/Component placement/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -591,7 +591,7 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -627,6 +627,12 @@
           "group_by": false,
           "label": "Supplier no.",
           "name": "Supplier no.",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Accept alternative part",
+          "name": "Accept alternative part",
           "show": true
         }
       ],

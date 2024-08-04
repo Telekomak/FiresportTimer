@@ -608,6 +608,152 @@
 				)
 			)
 		)
+		(symbol "Device:Polyfuse"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at -2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Polyfuse"
+				(at 2.54 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resettable fuse PTC PPTC polyfuse polyswitch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*polyfuse* *PTC*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Polyfuse_0_1"
+				(rectangle
+					(start -0.762 2.54)
+					(end 0.762 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 2.54) (xy -1.524 1.524) (xy 1.524 -1.524) (xy 1.524 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Polyfuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -720,6 +866,355 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Simulation_SPICE:NMOS"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q1"
+				(at 6.35 -1.2701 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "2N7002,215"
+				(at 6.35 1.2699 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407241045_Nexperia-2N7002-215_C65189.pdf"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "N-MOSFET transistor, drain/source/gate"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "NMOS"
+				(at 0 -17.145 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" "VDMOS"
+				(at 0 -19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=D 2=G 3=S"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Assembly" "YES"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "LCSC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supplier no." "C65189"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "URL" "https://www.lcsc.com/product-detail/MOSFETs_Nexperia-2N7002-215_C65189.html"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NMOS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "NMOS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1042,301 +1537,6 @@
 				)
 			)
 		)
-		(symbol "Transistor_FET:IRLML5203"
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "IRLML5203"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.infineon.com/dgdl/irlml5203pbf.pdf?fileId=5546d462533600a40153566868da261d"
-				(at 5.08 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "-3.0A Id, -30V Vds, 98mOhm Rds, P-Channel HEXFET Power MOSFET, SOT-23"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "P-Channel HEXFET MOSFET"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "IRLML5203_0_1"
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "IRLML5203_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+12V"
 			(power)
 			(pin_numbers hide)
@@ -1561,6 +1761,12 @@
 		(uuid "318a72af-c571-41ae-bf2d-ecde9d6ab56c")
 	)
 	(junction
+		(at 66.04 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "338cefc7-49df-4a4d-a0cc-112a4b5c3432")
+	)
+	(junction
 		(at 92.71 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1573,22 +1779,16 @@
 		(uuid "59917551-f885-4155-9e3f-eda70bf7b97c")
 	)
 	(junction
-		(at 80.01 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5c7405de-63c5-46a6-9e27-18c674a7ccf1")
-	)
-	(junction
 		(at 92.71 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73f6ecaa-8064-4fb2-8ffc-de375023d84d")
 	)
 	(junction
-		(at 66.04 111.76)
+		(at 82.55 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c46227f0-7b82-4d17-941f-8f6483d8ee1c")
+		(uuid "8b88eec1-1746-46d2-bad0-b9f6e3520170")
 	)
 	(junction
 		(at 68.58 113.03)
@@ -1598,7 +1798,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 111.76) (xy 66.04 111.76)
+			(xy 39.37 109.22) (xy 66.04 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1608,23 +1808,33 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 111.76) (xy 87.63 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "029f0fb8-02f1-43ae-bd8d-564dbc9ad216")
-	)
-	(wire
-		(pts
-			(xy 39.37 115.57) (xy 39.37 111.76)
+			(xy 39.37 109.22) (xy 39.37 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "057fa8cc-cca2-456a-aa77-e46b48f98b8e")
+	)
+	(wire
+		(pts
+			(xy 71.12 105.41) (xy 71.12 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0805997a-30bc-4c89-bec1-db6f2cc536b3")
+	)
+	(wire
+		(pts
+			(xy 82.55 109.22) (xy 87.63 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0acb5c47-a51d-4b11-9cb9-a3da745fa981")
 	)
 	(wire
 		(pts
@@ -1668,7 +1878,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 99.06) (xy 85.09 99.06)
+			(xy 44.45 100.33) (xy 85.09 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1688,27 +1898,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 77.47) (xy 92.71 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ff992b7-b2ae-4a09-b0f0-180210ab07da")
-	)
-	(wire
-		(pts
-			(xy 101.6 115.57) (xy 101.6 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51c8edc6-8f11-4a81-8e80-c34ba7dac48d")
-	)
-	(wire
-		(pts
-			(xy 104.14 115.57) (xy 104.14 113.03)
+			(xy 104.14 118.11) (xy 104.14 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1718,7 +1908,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 115.57) (xy 87.63 111.76)
+			(xy 87.63 118.11) (xy 87.63 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1738,7 +1928,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 111.76) (xy 80.01 111.76)
+			(xy 66.04 109.22) (xy 72.39 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1748,17 +1938,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 105.41) (xy 71.12 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79776a33-970d-4b7f-a988-d02bc2d5b85f")
-	)
-	(wire
-		(pts
-			(xy 85.09 99.06) (xy 85.09 96.52)
+			(xy 85.09 100.33) (xy 85.09 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1778,17 +1958,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 109.22) (xy 80.01 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "931f7933-fbfa-497b-936f-751d493e9862")
-	)
-	(wire
-		(pts
-			(xy 46.99 105.41) (xy 46.99 115.57)
+			(xy 46.99 105.41) (xy 46.99 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1798,7 +1968,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 113.03) (xy 68.58 115.57)
+			(xy 68.58 113.03) (xy 68.58 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1808,17 +1978,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 111.76) (xy 66.04 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "989ae31f-d804-4c9f-b671-bc5ea3fc9eba")
-	)
-	(wire
-		(pts
-			(xy 92.71 91.44) (xy 92.71 115.57)
+			(xy 92.71 91.44) (xy 92.71 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1828,7 +1988,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 113.03) (xy 80.01 118.11)
+			(xy 80.01 113.03) (xy 80.01 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1848,7 +2008,17 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 113.03) (xy 90.17 115.57)
+			(xy 82.55 107.95) (xy 82.55 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a82026f4-33a3-4205-91a3-24f58745617e")
+	)
+	(wire
+		(pts
+			(xy 90.17 113.03) (xy 90.17 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1858,23 +2028,43 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 86.36) (xy 85.09 77.47)
+			(xy 66.04 109.22) (xy 66.04 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "af542ddd-3165-43ce-9aa2-db5c8f61612e")
+		(uuid "af05290e-b8cb-4045-9699-553cdcc7ef39")
 	)
 	(wire
 		(pts
-			(xy 44.45 99.06) (xy 44.45 115.57)
+			(xy 44.45 100.33) (xy 44.45 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bcf655b8-e8cb-4b5f-9dde-e6cc49498e8e")
+	)
+	(wire
+		(pts
+			(xy 101.6 96.52) (xy 101.6 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c69fa360-9342-49eb-9a33-a9c3b9fce37f")
+	)
+	(wire
+		(pts
+			(xy 85.09 77.47) (xy 85.09 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6e5c41e-6e67-4e49-936a-26e393069948")
 	)
 	(wire
 		(pts
@@ -1888,6 +2078,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 109.22) (xy 80.01 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc7e72f5-eb1e-479c-a445-6666fb61d3a7")
+	)
+	(wire
+		(pts
 			(xy 41.91 113.03) (xy 68.58 113.03)
 		)
 		(stroke
@@ -1898,7 +2098,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 115.57) (xy 41.91 113.03)
+			(xy 41.91 118.11) (xy 41.91 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1916,8 +2116,8 @@
 		)
 		(uuid "fead784d-6a41-4083-a821-b2859494864f")
 	)
-	(label "PASTRHRU_IN"
-		(at 71.12 115.57 0)
+	(label "PASSTHRU"
+		(at 53.34 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1925,10 +2125,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5509518c-6d68-485d-995c-361af8965aa9")
+		(uuid "7bef8243-4532-4895-badd-f19ebabb7d86")
 	)
 	(label "Q_UOT_DRAIN"
-		(at 85.09 99.06 270)
+		(at 85.09 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1938,25 +2138,14 @@
 		)
 		(uuid "a8e08cab-75ef-4d33-931d-ad7cd8dc1ced")
 	)
-	(label "PASSTHRU_OUT"
-		(at 62.23 105.41 180)
+	(label "LED_OUT"
+		(at 101.6 99.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
-		)
-		(uuid "ad2a9b89-ff51-4430-b2bc-6484fb384cda")
-	)
-	(label "LED_OUT"
-		(at 101.6 105.41 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
 		)
 		(uuid "c05bb323-4afa-4cc1-9579-3b51f799e20f")
 	)
@@ -2054,7 +2243,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier no." ""
+		(property "Supplier no." "~"
 			(at 92.71 83.82 0)
 			(effects
 				(font
@@ -2063,7 +2252,16 @@
 				(hide yes)
 			)
 		)
-		(property "URL" ""
+		(property "URL" "~"
+			(at 92.71 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
 			(at 92.71 83.82 0)
 			(effects
 				(font
@@ -2088,8 +2286,152 @@
 		)
 	)
 	(symbol
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 87.63 91.44 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1fd14076-aebe-41fb-b44d-a90d1f66ff56")
+		(property "Reference" "Q1"
+			(at 82.042 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002,215"
+			(at 82.042 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 82.55 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2407241045_Nexperia-2N7002-215_C65189.pdf"
+			(at 87.63 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 87.63 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 87.63 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 87.63 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "YES"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier no." "C65189"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.lcsc.com/product-detail/MOSFETs_Nexperia-2N7002-215_C65189.html"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "YES"
+			(at 87.63 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0dead48e-af09-4dc4-a997-2969d4acd1ed")
+		)
+		(pin "2"
+			(uuid "8a1d3fd5-7b74-4ebb-97fa-3c8b0c585b83")
+		)
+		(pin "3"
+			(uuid "8b678719-024c-4d2f-8781-5726ae13dc67")
+		)
+		(instances
+			(project "FT_TargetSwitch"
+				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 68.58 120.65 90)
+		(at 68.58 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2098,7 +2440,7 @@
 		(fields_autoplaced yes)
 		(uuid "2765346d-d1bb-4050-adbe-7268184f6e06")
 		(property "Reference" "CON2"
-			(at 68.58 123.19 90)
+			(at 68.58 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2106,7 +2448,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 68.58 125.73 90)
+			(at 68.58 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2115,7 +2457,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2124,7 +2466,7 @@
 			)
 		)
 		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-164/dsh.800-164.1.pdf"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2133,7 +2475,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2142,7 +2484,7 @@
 			)
 		)
 		(property "Assembly" "NO"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2151,7 +2493,7 @@
 			)
 		)
 		(property "Supplier" "GME"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2160,7 +2502,7 @@
 			)
 		)
 		(property "Supplier no." "800-164"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2169,7 +2511,16 @@
 			)
 		)
 		(property "URL" "https://www.gme.cz/v/1497964/kls-psh02-03pg-konektor-vidlice-roztec-254mm-1x3piny-prima-do-dps"
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
+			(at 68.58 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,7 +2548,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 90.17 120.65 90)
+		(at 90.17 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2206,7 +2557,7 @@
 		(fields_autoplaced yes)
 		(uuid "409bcaa5-da12-4efc-ad30-5e068bb9065b")
 		(property "Reference" "CON3"
-			(at 90.17 123.19 90)
+			(at 90.17 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2214,7 +2565,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Pin"
-			(at 90.17 125.73 90)
+			(at 90.17 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2223,7 +2574,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2232,7 +2583,7 @@
 			)
 		)
 		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-164/dsh.800-164.1.pdf"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2241,7 +2592,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2250,7 +2601,7 @@
 			)
 		)
 		(property "Assembly" "NO"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2259,7 +2610,7 @@
 			)
 		)
 		(property "Supplier" "GME"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2268,7 +2619,7 @@
 			)
 		)
 		(property "Supplier no." "800-164"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2277,7 +2628,16 @@
 			)
 		)
 		(property "URL" "https://www.gme.cz/v/1497964/kls-psh02-03pg-konektor-vidlice-roztec-254mm-1x3piny-prima-do-dps"
-			(at 90.17 120.65 0)
+			(at 90.17 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
+			(at 90.17 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2304,8 +2664,124 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Polyfuse")
+		(at 76.2 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b7c1aeb-af5a-45ab-80da-57439b21628d")
+		(property "Reference" "F1"
+			(at 77.724 106.426 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BSMD0603-025-12V"
+			(at 76.962 120.396 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0603_1608Metric"
+			(at 81.28 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2305121425_BHFUSE-BSMD0603-025-12V_C2977520.pdf"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "YES"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "YES"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "LCSC"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier no." "C2977520"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.lcsc.com/product-detail/Resettable-Fuses_BHFUSE-BSMD0603-025-12V_C2977520.html"
+			(at 76.2 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1eb96cd-d329-4791-b4d9-c8c53d8a42f7")
+		)
+		(pin "2"
+			(uuid "d2545d6f-dccc-4080-970f-a3add49d91c7")
+		)
+		(instances
+			(project "FT_TargetSwitch"
+				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 41.91 120.65 90)
+		(at 41.91 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2313,7 +2789,7 @@
 		(dnp no)
 		(uuid "7f6abf2b-6898-4837-92c2-17a3004ae452")
 		(property "Reference" "CON1"
-			(at 42.926 123.698 90)
+			(at 42.926 126.238 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2321,7 +2797,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Pin"
-			(at 43.18 125.73 90)
+			(at 43.18 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2330,7 +2806,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2339,7 +2815,7 @@
 			)
 		)
 		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-170/dsh.800-170.1.pdf"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2348,7 +2824,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2357,7 +2833,7 @@
 			)
 		)
 		(property "Assembly" "NO"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2366,7 +2842,7 @@
 			)
 		)
 		(property "Supplier" "GME"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,7 +2851,7 @@
 			)
 		)
 		(property "Supplier no." "800-170"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2384,7 +2860,16 @@
 			)
 		)
 		(property "URL" "https://www.gme.cz/v/1497969/kls-psh02-04pg-konektor-vidlice-roztec-254mm-1x4piny-prima-do-dps"
-			(at 41.91 120.65 0)
+			(at 41.91 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
+			(at 41.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2481,16 +2966,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 80.01 118.11 0)
+		(at 85.09 77.47 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9900e9d4-5c3a-4393-af8c-add08cc8c81c")
-		(property "Reference" "#PWR02"
-			(at 80.01 124.46 0)
+		(uuid "88839e4d-4c0b-4388-9a80-7dd1561ddeac")
+		(property "Reference" "#PWR04"
+			(at 85.09 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2499,7 +2984,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 80.01 123.19 0)
+			(at 85.09 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2507,7 +2992,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 118.11 0)
+			(at 85.09 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2516,7 +3001,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 118.11 0)
+			(at 85.09 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2525,7 +3010,73 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 80.01 118.11 0)
+			(at 85.09 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07deece4-d785-44b9-a327-db16c498e4f5")
+		)
+		(instances
+			(project "FT_TargetSwitch"
+				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 80.01 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9900e9d4-5c3a-4393-af8c-add08cc8c81c")
+		(property "Reference" "#PWR02"
+			(at 80.01 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.01 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 80.01 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2540,117 +3091,6 @@
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:IRLML5203")
-		(at 87.63 91.44 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a9b74c77-a870-4888-9d7f-70e109d7d9c1")
-		(property "Reference" "Q1"
-			(at 82.55 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRLML5203"
-			(at 82.55 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 82.55 89.535 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Infineon-Technologies-IRLML5203TRPBF_C2592.pdf"
-			(at 82.55 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "-3.0A Id, -30V Vds, 98mOhm Rds, P-Channel HEXFET Power MOSFET, SOT-23"
-			(at 87.63 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Assembly" "YES"
-			(at 87.63 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 87.63 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier no." "C2592"
-			(at 87.63 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.lcsc.com/product-detail/MOSFETs_Infineon-Technologies-IRLML5203TRPBF_C2592.html"
-			(at 87.63 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a0876ae9-c2b3-4606-a19c-dd4b1e3e156f")
-		)
-		(pin "1"
-			(uuid "6dda59ef-71cc-4c6c-837b-905f470ebbf3")
-		)
-		(pin "3"
-			(uuid "d4201ce0-c410-4595-9e74-1b48426e4a04")
-		)
-		(instances
-			(project "FT_TargetSwitch"
-				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -2774,6 +3214,15 @@
 				(hide yes)
 			)
 		)
+		(property "Accept alternative part" "YES"
+			(at 99.06 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e3976db6-445a-4c2b-ae81-70721479da70")
 		)
@@ -2794,7 +3243,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 101.6 120.65 90)
+		(at 101.6 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2802,7 +3251,7 @@
 		(dnp no)
 		(uuid "cda9923b-1d9d-45d4-ae87-702c03386ca2")
 		(property "Reference" "CON4"
-			(at 99.568 123.19 90)
+			(at 99.568 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2811,7 +3260,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 105.41 121.2849 90)
+			(at 105.41 123.8249 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2821,7 +3270,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2830,7 +3279,7 @@
 			)
 		)
 		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-163/dsh.800-163.1.pdf"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2839,7 +3288,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2848,7 +3297,7 @@
 			)
 		)
 		(property "Assembly" "NO"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2857,7 +3306,7 @@
 			)
 		)
 		(property "Supplier" "GME"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2866,7 +3315,7 @@
 			)
 		)
 		(property "Supplier no." "800-163"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2875,7 +3324,16 @@
 			)
 		)
 		(property "URL" "https://www.gme.cz/v/1497299/kls-psh02-02pg-konektor-vidlice-roztec-254mm-1x2piny-prima-do-dps"
-			(at 101.6 120.65 0)
+			(at 101.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Accept alternative part" "~"
+			(at 101.6 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2900,7 +3358,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 80.01 109.22 0)
+		(at 82.55 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2909,7 +3367,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3f8c28b-ecf1-42c6-ac3e-98c098705bcc")
 		(property "Reference" "#PWR01"
-			(at 80.01 113.03 0)
+			(at 82.55 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2918,7 +3376,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 80.01 104.14 0)
+			(at 82.55 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2926,7 +3384,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 80.01 109.22 0)
+			(at 82.55 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2935,7 +3393,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 80.01 109.22 0)
+			(at 82.55 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2944,7 +3402,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 80.01 109.22 0)
+			(at 82.55 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
