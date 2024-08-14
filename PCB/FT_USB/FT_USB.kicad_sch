@@ -844,7 +844,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7381b796-c49e-40c8-92d7-8f035aba8c78")
-		(property "Reference" "CON1"
+		(property "Reference" "CON301"
 			(at 110.49 74.9299 90)
 			(effects
 				(font
@@ -952,7 +952,7 @@
 		(instances
 			(project "FT_USB"
 				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
-					(reference "CON1")
+					(reference "CON301")
 					(unit 1)
 				)
 			)
@@ -968,7 +968,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f11d6277-5427-4b41-8a9d-92a656caf669")
-		(property "Reference" "J1"
+		(property "Reference" "CON302"
 			(at 100.33 100.33 90)
 			(effects
 				(font
@@ -1071,7 +1071,7 @@
 		(instances
 			(project "FT_USB"
 				(path "/23b06d04-94b1-4b12-b68f-9e0b5d3168f9"
-					(reference "J1")
+					(reference "CON302")
 					(unit 1)
 				)
 			)

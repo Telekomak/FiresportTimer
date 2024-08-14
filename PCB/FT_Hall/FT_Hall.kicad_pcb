@@ -115,9 +115,10 @@
 		(at 106.54 107.214 90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R1"
+		(property "Reference" "R101"
 			(at 0 -2.032 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "38942286-da07-4c60-aed5-74b063baa02f")
 			(effects
 				(font
@@ -219,6 +220,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9e2b457a-fe04-4bbe-b62e-3aa702b8f3c4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6f0d36bd-d59f-44cf-8cc1-0ee6fa616a5e")
 			(effects
 				(font
 					(size 1 1)
@@ -378,9 +392,10 @@
 		(at 104 113.564 -90)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
-		(property "Reference" "HAL1"
+		(property "Reference" "Q101"
 			(at 2.74 2.104 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4678b0d9-690c-4c55-9dc3-c2fe174a5619")
 			(effects
 				(font
@@ -482,6 +497,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a308dfa8-736d-4eb4-81f8-6f9ceccf4d14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" "NO"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "858b6a20-b89e-4b10-8c89-2b8f744bc21c")
 			(effects
 				(font
 					(size 1 1)
@@ -694,9 +722,10 @@
 		(at 102.222 109.754 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
-		(property "Reference" "C2"
+		(property "Reference" "C102"
 			(at 1.016 -2.032 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4c7ee5bd-855b-4d63-9bb0-19110eb032a8")
 			(effects
 				(font
@@ -729,7 +758,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-CC0603KRX7R8BB472_C505480.pdf"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -766,7 +795,7 @@
 				)
 			)
 		)
-		(property "Supplier" "LCSC"
+		(property "Supplier" "PCBWAY"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -779,7 +808,7 @@
 				)
 			)
 		)
-		(property "Supplier no." "C505480"
+		(property "Supplier no." ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -792,12 +821,25 @@
 				)
 			)
 		)
-		(property "URL" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R8BB472_C505480.html"
+		(property "URL" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "98888bf2-eb9a-40fe-b035-78ab68dd724c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d239abaa-8603-4bb0-ae1f-cebe72d2debe")
 			(effects
 				(font
 					(size 1 1)
@@ -957,9 +999,10 @@
 		(at 105.778 109.754 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
-		(property "Reference" "C1"
+		(property "Reference" "C101"
 			(at -1.016 -2.032 -90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "35d4117f-4e75-44c1-acbb-fa2c1ddc407f")
 			(effects
 				(font
@@ -992,7 +1035,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-CC0603KRX7R8BB472_C505480.pdf"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1029,7 +1072,7 @@
 				)
 			)
 		)
-		(property "Supplier" "LCSC"
+		(property "Supplier" "PCBWAY"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1042,7 +1085,7 @@
 				)
 			)
 		)
-		(property "Supplier no." "C505480"
+		(property "Supplier no." ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1055,12 +1098,25 @@
 				)
 			)
 		)
-		(property "URL" "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R8BB472_C505480.html"
+		(property "URL" ""
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eba378df-c275-40ef-8705-dc80d3649950")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b7f9841-33a0-4f91-91b8-1e49ea2f972c")
 			(effects
 				(font
 					(size 1 1)
@@ -1218,7 +1274,7 @@
 		(layer "F.Cu")
 		(uuid "9ed830fc-43a4-42b1-b1b1-649ea9aedc45")
 		(at 104 102.134)
-		(property "Reference" "CON1"
+		(property "Reference" "CON101"
 			(at 0 -0.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -1328,6 +1384,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0500a76-8a56-4591-9391-c8fde8a7a268")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a9683b2-78df-494c-9f40-01b2fb03f6d9")
 			(effects
 				(font
 					(size 1 1)

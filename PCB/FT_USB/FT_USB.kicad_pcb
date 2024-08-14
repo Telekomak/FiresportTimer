@@ -105,7 +105,7 @@
 		)
 	)
 	(net 0 "")
-	(net 1 "Net-(CON1-VBUS)")
+	(net 1 "Net-(CON301-VBUS)")
 	(net 2 "GND")
 	(net 3 "/USB_D-")
 	(net 4 "/USB_D+")
@@ -115,7 +115,7 @@
 		(at 113.75 110.0175)
 		(descr "http://www.mouser.com/ds/2/418/NG_CD_5787834_A4-669110.pdf")
 		(tags "USB_B USB B vertical female connector")
-		(property "Reference" "CON1"
+		(property "Reference" "CON301"
 			(at -5.8 -4.55 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -220,6 +220,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e74350af-1643-478b-8675-527e23a2f109")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "73d6eaa2-8ebe-46f4-8cef-de944af21d43")
 			(effects
 				(font
 					(size 1 1)
@@ -429,7 +442,7 @@
 			(drill 0.92)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "Net-(CON1-VBUS)")
+			(net 1 "Net-(CON301-VBUS)")
 			(pinfunction "VBUS")
 			(pintype "power_out")
 			(uuid "2e3e844f-21b3-4a74-928f-f89011e85e90")
@@ -507,8 +520,8 @@
 		(at 116.3 122 90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
-		(property "Reference" "J1"
-			(at 0 2.33 270)
+		(property "Reference" "CON302"
+			(at 0 2.33 -90)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "2be5d75e-1104-41bd-a6b2-2e327e26683c")
@@ -521,7 +534,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04"
-			(at 0 -9.95 270)
+			(at 0 -9.95 -90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "46fe4fe7-7c76-4660-b152-9a1b92a11d13")
@@ -546,7 +559,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://img.gme.cz/files/eshop_data/eshop_data/5/800-170/dsh.800-170.1.pdf"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -568,6 +581,76 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Accept alternative part" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7cbc7e5d-0caa-4aa0-8f2a-3b2116a7a13c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Assemble" "NO"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5cf1503a-0c19-4435-9ab4-f75e6ffbbff1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Supplier" "GME"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6b1e81a2-9eeb-42ec-ac0c-fc236679b2d7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Supplier no." "800-170"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d4e19070-0de6-40b1-a526-7d774e9b428a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "URL" "https://www.gme.cz/v/1497969/kls-psh02-04pg-konektor-vidlice-roztec-254mm-1x4piny-prima-do-dps"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e4f830b1-06a4-48fe-be84-4b2516b39843")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 				(justify mirror)
 			)
@@ -745,7 +828,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "Net-(CON1-VBUS)")
+			(net 1 "Net-(CON301-VBUS)")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "f435d4e6-be36-4689-842e-03e61f63122d")

@@ -10056,7 +10056,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "1K"
 			(at 269.24 34.2899 0)
 			(effects
 				(font
@@ -12347,7 +12347,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "SW_Push_SMD"
 			(at 250.19 148.5899 90)
 			(effects
 				(font
@@ -15483,7 +15483,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "1K"
 			(at 49.53 38.608 90)
 			(effects
 				(font
@@ -15822,7 +15822,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "1K"
 			(at 49.53 30.226 90)
 			(effects
 				(font

@@ -1,8 +1,0 @@
-"Reference","Value","Datasheet","Qty","Assembly","Supplier","URL","Supplier no.","Accept alternative part"
-"CON1","Conn_01x04_Pin","https://img.gme.cz/files/eshop_data/eshop_data/5/800-170/dsh.800-170.1.pdf","1","NO","GME","https://www.gme.cz/v/1497969/kls-psh02-04pg-konektor-vidlice-roztec-254mm-1x4piny-prima-do-dps","800-170","~"
-"CON2,CON3","Conn_01x03_Pin","https://img.gme.cz/files/eshop_data/eshop_data/5/800-164/dsh.800-164.1.pdf","2","NO","GME","https://www.gme.cz/v/1497964/kls-psh02-03pg-konektor-vidlice-roztec-254mm-1x3piny-prima-do-dps","800-164","~"
-"CON4","Conn_01x02_Pin","https://img.gme.cz/files/eshop_data/eshop_data/5/800-163/dsh.800-163.1.pdf","1","NO","GME","https://www.gme.cz/v/1497299/kls-psh02-02pg-konektor-vidlice-roztec-254mm-1x2piny-prima-do-dps","800-163","~"
-"F1","BSMD0603-025-12V","https://www.lcsc.com/datasheet/lcsc_datasheet_2305121425_BHFUSE-BSMD0603-025-12V_C2977520.pdf","1","YES","LCSC","https://www.lcsc.com/product-detail/Resettable-Fuses_BHFUSE-BSMD0603-025-12V_C2977520.html","C2977520","YES"
-"Q1","2N7002,215","https://www.lcsc.com/datasheet/lcsc_datasheet_2407241045_Nexperia-2N7002-215_C65189.pdf","1","YES","LCSC","https://www.lcsc.com/product-detail/MOSFETs_Nexperia-2N7002-215_C65189.html","C65189","YES"
-"Q2","IRFR9024N","https://www.lcsc.com/datasheet/lcsc_datasheet_2312271256_Infineon-Technologies-IRFR9024NTRPBF_C2585.pdf","1","YES","LCSC","https://www.lcsc.com/product-detail/MOSFETs_Infineon-Technologies-IRFR9024NTRPBF_C2585.html","C2585","YES"
-"R1","10K","~","1","YES","PCBWAY","~","~","~"

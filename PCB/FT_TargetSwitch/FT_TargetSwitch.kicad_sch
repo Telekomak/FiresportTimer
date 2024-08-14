@@ -2180,7 +2180,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0ec757b6-3058-4704-b2d8-c6aeb0448c4d")
-		(property "Reference" "R1"
+		(property "Reference" "R201"
 			(at 94.234 82.55 0)
 			(effects
 				(font
@@ -2279,7 +2279,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "R1")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -2294,7 +2294,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1fd14076-aebe-41fb-b44d-a90d1f66ff56")
-		(property "Reference" "Q1"
+		(property "Reference" "Q201"
 			(at 82.042 90.17 0)
 			(effects
 				(font
@@ -2423,7 +2423,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "Q1")
+					(reference "Q201")
 					(unit 1)
 				)
 			)
@@ -2439,7 +2439,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2765346d-d1bb-4050-adbe-7268184f6e06")
-		(property "Reference" "CON2"
+		(property "Reference" "CON202"
 			(at 68.58 125.73 90)
 			(effects
 				(font
@@ -2540,7 +2540,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "CON2")
+					(reference "CON202")
 					(unit 1)
 				)
 			)
@@ -2556,7 +2556,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "409bcaa5-da12-4efc-ad30-5e068bb9065b")
-		(property "Reference" "CON3"
+		(property "Reference" "CON203"
 			(at 90.17 125.73 90)
 			(effects
 				(font
@@ -2657,7 +2657,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "CON3")
+					(reference "CON203")
 					(unit 1)
 				)
 			)
@@ -2672,7 +2672,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7b7c1aeb-af5a-45ab-80da-57439b21628d")
-		(property "Reference" "F1"
+		(property "Reference" "F201"
 			(at 77.724 106.426 90)
 			(effects
 				(font
@@ -2773,7 +2773,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "F1")
+					(reference "F201")
 					(unit 1)
 				)
 			)
@@ -2788,7 +2788,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f6abf2b-6898-4837-92c2-17a3004ae452")
-		(property "Reference" "CON1"
+		(property "Reference" "CON201"
 			(at 42.926 126.238 90)
 			(effects
 				(font
@@ -2892,7 +2892,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "CON1")
+					(reference "CON201")
 					(unit 1)
 				)
 			)
@@ -3106,7 +3106,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c4366764-ea07-49e6-b32c-9194aee3a461")
-		(property "Reference" "Q2"
+		(property "Reference" "Q202"
 			(at 104.14 89.916 0)
 			(effects
 				(font
@@ -3235,7 +3235,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "Q2")
+					(reference "Q202")
 					(unit 1)
 				)
 			)
@@ -3250,7 +3250,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cda9923b-1d9d-45d4-ae87-702c03386ca2")
-		(property "Reference" "CON4"
+		(property "Reference" "CON204"
 			(at 99.568 125.73 90)
 			(effects
 				(font
@@ -3350,7 +3350,7 @@
 		(instances
 			(project "FT_TargetSwitch"
 				(path "/135d114f-f68d-4e79-9ee5-cca5273d2aa9"
-					(reference "CON4")
+					(reference "CON204")
 					(unit 1)
 				)
 			)

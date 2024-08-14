@@ -1,0 +1,33 @@
+Reference,Value,Qty,Footprint,Assembly,Supplier,Supplier no.,Accept alternative part,Datasheet,URL
+SW4,SW_Push_SMD,1,custom_components:switch,YES,LCSC,C455280,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XUNPU-TS-1088R-02026_C455280.pdf,https://www.lcsc.com/product-detail/Tactile-Switches_XUNPU-TS-1088R-02026_C455280.html
+"Q1,Q2","PMBT3904,215",2,Package_TO_SOT_SMD:SOT-23,YES,LCSC,C8667,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2407241045_Nexperia-PMBT3904-215_C8667.pdf,https://www.lcsc.com/product-detail/Bipolar-BJT_Nexperia-PMBT3904-215_C8667.html
+OSC1,16MHz,1,Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm,YES,LCSC,C498200,YES,https://datasheet.lcsc.com/lcsc/2004161134_TST-TZ0233A_C498200.pdf,https://www.lcsc.com/product-detail/Crystals_span-style-background-color-ff0-TST-span-TZ0233A_C498200.html
+IC4,L78M05ABDT-TR,1,Package_TO_SOT_SMD:TO-252-2,YES,LCSC,C58069,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2307281528_STMicroelectronics-L78M05ABDT-TR_C58069.pdf,https://www.lcsc.com/product-detail/Voltage-Regulators-span-style-background-color-ff0-Linear-span-Low-Drop-Out-LDO-Regulators_STMicroelectronics-L78M05ABDT-TR_C58069.html
+IC3,"74HC3G14DP,125 ",1,Package_SO:MSOP-8_3x3mm_P0.65mm,YES,LCSC,C5359730,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2302211801_Nexperia-74HC3G14DP-125_C5359730.pdf,https://www.lcsc.com/product-detail/Inverters_Nexperia-74HC3G14DP-125_C5359730.html
+IC2,FT231XS-R ,1,Package_SO:SSOP-20_3.9x8.7mm_P0.635mm,YES,LCSC,C132160,NO,https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FTDI-FT231XS-R_C132160.pdf,https://www.lcsc.com/product-detail/USB-Converters_FTDI-FT231XS-R_C132160.html
+IC1,ATmega328PB-AU,1,Package_QFP:TQFP-32_7x7mm_P0.8mm,YES,LCSC,C132230,NO,https://www.lcsc.com/datasheet/lcsc_datasheet_2210181030_Microchip-Tech-ATMEGA328PB-AU_C132230.pdf,https://www.lcsc.com/product-detail/Microcontrollers-MCU-MPU-SOC_Microchip-Tech-ATMEGA328PB-AU_C132230.html
+"D1,D2","BZX384-B5V1,115",2,Diode_SMD:D_SOD-323,YES,LCSC,C426823,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2407241029_Nexperia-BZX384-B5V1-115_C426823.pdf,https://www.lcsc.com/product-detail/Zener-Diodes_Nexperia-BZX384-B5V1-115_C426823.html
+Q101,TLV4906K,2,Package_TO_SOT_SMD:SOT-23,YES,LCSC,C126637,NO,https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Infineon-Technologies-TLV4906K_C126637.pdf,https://www.lcsc.com/product-detail/Hall-Switches_Infineon-Technologies-TLV4906K_C126637.html
+F201,BSMD0603-025-12V,2,Fuse:Fuse_0603_1608Metric,YES,LCSC,C2977520,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2305121425_BHFUSE-BSMD0603-025-12V_C2977520.pdf,https://www.lcsc.com/product-detail/Resettable-Fuses_BHFUSE-BSMD0603-025-12V_C2977520.html
+Q201,"2N7002,215",2,Package_TO_SOT_SMD:SOT-23,YES,LCSC,C65189,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2407241045_Nexperia-2N7002-215_C65189.pdf,https://www.lcsc.com/product-detail/MOSFETs_Nexperia-2N7002-215_C65189.html
+Q202,IRFR9024N,2,Package_TO_SOT_SMD:TO-252-2,YES,LCSC,C2585,YES,https://www.lcsc.com/datasheet/lcsc_datasheet_2312271256_Infineon-Technologies-IRFR9024NTRPBF_C2585.pdf,https://www.lcsc.com/product-detail/MOSFETs_Infineon-Technologies-IRFR9024NTRPBF_C2585.html
+R21,4K7,1,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+R15,330R,1,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"R13,R14,R19,R20",1.2K,4,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"R12,R17,R18,R22",10K,4,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"R6,R7,R8,R9,R10,R11",1000R,6,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"R4,R5",27R,2,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"R2,R3,R16",1K,3,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+R1,200R,1,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+LED3,RED,1,LED_SMD:LED_0603_1608Metric,YES,PCBWAY,~,~,~,~
+LED2,GREEN,1,LED_SMD:LED_0603_1608Metric,YES,PCBWAY,~,~,~,~
+LED1,YELLOW,1,LED_SMD:LED_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C14,C15","1n, 25V",2,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+C11,"330nF, 25V",1,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C8,C9,C10","100n, 16V",3,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C6,C7","47pF, 16V",2,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C3,C4","22pF, 16V",2,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C1,C2,C5,C16,C17,C18","100nF, 16V",6,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+"C101,C102","4.7nF, 25V",4,Capacitor_SMD:C_0603_1608Metric,YES,PCBWAY,~,~,~,~
+R101,200R,2,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~
+R201,10K,2,Resistor_SMD:R_0603_1608Metric,YES,PCBWAY,~,~,~,~

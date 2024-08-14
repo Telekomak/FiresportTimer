@@ -1,6 +1,0 @@
-Ref,Val,Package,PosX,PosY,Rot,Side
-"HDR1","Conn_01x16_Pin","PinHeader_1x16_P2.54mm_Vertical",138.000000,-118.000000,-90.000000,top
-"RV1","Vishay 64X 10K","PinHeader_1x03_P2.54mm_Vertical",149.860000,-109.220000,180.000000,top
-"SW1","SW_Push","SW_PUSH-12mm",99.000000,-62.000000,0.000000,top
-"SW2","SW_Push","SW_PUSH-12mm",65.000000,-62.000000,0.000000,top
-"SW3","SW_Push","SW_PUSH-12mm",133.000000,-62.000000,0.000000,top
