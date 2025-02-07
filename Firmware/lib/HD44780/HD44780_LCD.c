@@ -75,6 +75,7 @@ void LCD_pulse_en()
 	*(_LCD_config -> port) |= _LCD_config -> en;
 	_delay_us(LCD_DELAY);
 	*(_LCD_config -> port) &= ~_LCD_config -> en;
+    _delay_us(LCD_DELAY);
 }
 
 void LCD_pulse_en_repeat(int repeat)
