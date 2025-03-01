@@ -31,4 +31,10 @@ add_custom_target(
 )
 
 add_executable(Z_DUMMY_TARGET ${SRC_LIST}
-        ../include/modbus.h)
+        ../../../C_Primitives/CIrcleBuffer/CircleBuffer/circle_buffer.c
+        ../../../C_Primitives/CIrcleBuffer/CircleBuffer/circle_buffer.h
+        ../lib/TimerBus/timer_bus.h
+        ../lib/TimerBus/timer_bus.c
+        ../lib/TimerBus/timer_bus.c
+        ../lib/TimerBus/timer_bus.h
+        ../lib/TimerBus/crc_table.h)
