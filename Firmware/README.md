@@ -4,7 +4,7 @@
   - veci co potrebuji bejt hned:
     - zapinani interruptu na pinech
     - zaznam casu
-  - nastavovani flagu (veci zacinajici `TIMER_CONTROL_`) pro veci ktery pockaj do `volatile uint8_t timer_control` ty potom resi main loop metodou `timer_event()`
+  - nastavovani flagu (veci zacinajici `TIMER_CONTROL_`) pro veci ktery pockaj do `volatile uint8_t timer_control` ty potom resi main loop metodou `timer_internal_ISR()`
     - uart
     - ui
 

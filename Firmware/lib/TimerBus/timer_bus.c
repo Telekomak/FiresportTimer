@@ -198,7 +198,7 @@ ISR(USART_RX_vect)
     if(input_buffer_length >= IO_BUFFER_LENGTH) input_buffer[input_buffer_length++] = UDR0;
     else
     {
-        uint8_t tmp = UDR0;
+        volatile uint8_t tmp = UDR0;
         status.rx_err = 1;
     }
 }

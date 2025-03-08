@@ -8,6 +8,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+#define TBMAP_SIZE 14
+
 typedef struct{
     uint8_t rx_complete :1;
     uint8_t tx_complete :1;
@@ -33,7 +35,49 @@ typedef enum{
     TB_CRC_ERR = 4
 }TB_RESPONSE;
 
-extern TBMAP tb_map;
+//Timer status register
+//Is read-only from uart
+typedef union{
+    struct{
+        uint8_t running     :1;
+        uint8_t left_down   :1;
+        uint8_t right_down  :1;
+        uint8_t count_mode  :1;//0-countdown, 1-countup
+        uint8_t reserved    :4;
+    }bit;
+    uint8_t reg;
+}TSREG;
+
+//Timer interrupt register
+//Is write-only* from uart
+//*Reading this register returns irrelevant information
+typedef union{
+    struct{
+        uint8_t start       :1;
+        uint8_t stop        :1;
+        uint8_t reset       :1;
+        uint8_t left_down   :1;
+        uint8_t right_down  :1;
+        uint8_t countdown   :1;
+        uint8_t countup     :1;
+        uint8_t reserved    :1;
+    }bit;
+    uint8_t reg;
+}TINTREG;
+
+typedef union {
+    struct{
+        TSREG status;
+        TINTREG external_interrupts;
+        uint32_t time;
+        uint32_t left_time;
+        uint32_t right_time;
+    }vars;
+    uint8_t array[TBMAP_SIZE];
+}TBMAP;
+
+//VARIABLES
+TBMAP tb_map;
 
 void tb_init();
 void tb_service();
