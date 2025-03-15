@@ -65,8 +65,8 @@ void display_init()
 
 void update_target_time()
 {
-    if(target_latch & TIMER_PIN_RIGHT) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
     if(target_latch & TIMER_PIN_LEFT) sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
+    if(target_latch & TIMER_PIN_RIGHT) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
 
     LCD_set_cursor(0, 3);
     LCD_write_string(left_time_str);
