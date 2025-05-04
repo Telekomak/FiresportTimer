@@ -71,7 +71,7 @@ static void uart_process_request()
         return;
     }
 
-    input_header.value = input_buffer[0];
+    memcpy(&input_header, input_buffer, 1);
     if((input_buffer_length - 1) != input_header.bits.remaining_bytes)
     {
         write_rx_err();

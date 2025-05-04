@@ -1,6 +1,6 @@
 #include "main.h"
 
-//#define UART_ECHO
+static void debug(uint8_t value);
 
 PinConfig lcd_config = {
         .port = &LCD_PORT,
@@ -39,10 +39,10 @@ int main(void)
 
     display_init();
 
-	while(1)
+    while(1)
 	{
         if(internal_interrupts.reg) timer_internal_ISR();
-        if(tb_map.vars.external_interrupts.reg) timer_external_ISR();
+        //if(tb_map.vars.external_interrupts.reg) timer_external_ISR();
         if((tb_map.vars.time & 0x8) && (PCMSK == TIMER_STATUS_RUNNING)) update_target_time();
 	}
 
@@ -177,7 +177,8 @@ void timer_external_ISR()
 void timer_init()
 {
     //TARGET_PINS
-    EICRA = 1 << ISC01 | 1 << ISC00 | 1 << ISC11 | 1 << ISC10; //Rising edge
+    //EICRA = 1 << ISC01 | 1 << ISC00 | 1 << ISC11 | 1 << ISC10; //Rising edge
+    EICRA = 1 << ISC01 | 1 << ISC11; //Falling edge
     EIMSK = 0;
 
 	//CONTROL PINS:
@@ -231,6 +232,7 @@ inline void timer_reset()
 	    tb_map.vars.left_time = 0;
         tb_map.vars.status.bit.left_down = 0;
         tb_map.vars.status.bit.right_down = 0;
+        tb_map.vars.status.bit.running = 0;
         PCMSK = TIMER_STATUS_STOPPED;
         EIMSK = 0;
     }
@@ -238,33 +240,35 @@ inline void timer_reset()
 
 void timer_left_down()
 {
+    //if(PCMSK == TIMER_STATUS_STOPPED) return; //TODO FIX EIMSK!!!!
+
     EIMSK &= ~TIMER_PIN_LEFT;
-    //target_latch &= ~TIMER_PIN_LEFT;
     target_latch = EIMSK;
     tb_map.vars.left_time = tb_map.vars.time;
     internal_interrupts.bit.left_down = 1;
     tb_map.vars.status.bit.left_down = 1;
 
-    if(!EIMSK) timer_stop();
+    if(EIMSK == 0) timer_stop();
 }
 
 void timer_right_down()
 {
+    //if(PCMSK == TIMER_STATUS_STOPPED) return; //TODO FIX EIMSK!!!!
+
     EIMSK &= ~TIMER_PIN_RIGHT;
-    //target_latch &= ~TIMER_PIN_RIGHT;
     target_latch = EIMSK;
     tb_map.vars.right_time = tb_map.vars.time;
     internal_interrupts.bit.right_down = 1;
     tb_map.vars.status.bit.right_down = 1;
 
-    if(!EIMSK) timer_stop();
+    if(EIMSK == 0) timer_stop();
 }
 
 ISR(PCINT2_vect)
 {
     //PCMSK holds valid pins for current internal_interrupts
     //Invert PIN because pullup
-	switch (((~CONTROL_PIN) & PCMSK) & last_input_state)
+	switch ((CONTROL_PIN & PCMSK) & last_input_state)
 	{
         case TIMER_PIN_START:
             timer_start();
@@ -281,22 +285,13 @@ ISR(PCINT2_vect)
 		default: break;
 	}
 
-    last_input_state = CONTROL_PIN;
+    last_input_state = ~(CONTROL_PIN & PCMSK);
 }
 
 ISR(TIMER0_COMPA_vect)
 {
 	tb_map.vars.time++;
 }
-
-/*UART echo
-ISR(USART_RX_vect)
-{
-    char data = UDR0;
-    while ( !( UCSR0A & (1<<UDRE0)) );
-    UDR0 = data;
-}
-*/
 
 ISR(LEFT_INT)
 {
@@ -308,10 +303,9 @@ ISR(RIGHT_INT)
     timer_right_down();
 }
 
-/*
 static void debug(uint8_t value)
 {
     char str[3];
     sprintf(str, "%x|", value);
     LCD_write_string(str);
-}*/
+}

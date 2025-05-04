@@ -39,11 +39,13 @@ typedef enum{
 //Is read-only from uart
 typedef union{
     struct{
-        uint8_t running     :1;
-        uint8_t left_down   :1;
-        uint8_t right_down  :1;
-        uint8_t count_mode  :1;//0-countdown, 1-countup
-        uint8_t reserved    :4;
+        uint8_t running             :1;
+        uint8_t left_down           :1;
+        uint8_t right_down          :1;
+        uint8_t count_mode          :1;//0-countdown, 1-countup
+        uint8_t start_pin_edge      :1;
+        uint8_t target_pin_config   :1;
+        uint8_t reserved    :2;
     }bit;
     uint8_t reg;
 }TSREG;
@@ -58,8 +60,8 @@ typedef union{
         uint8_t reset       :1;
         uint8_t left_down   :1;
         uint8_t right_down  :1;
-        uint8_t countdown   :1;
-        uint8_t countup     :1;
+        uint8_t count_up    :1;
+        uint8_t count_down  :1;
         uint8_t reserved    :1;
     }bit;
     uint8_t reg;
