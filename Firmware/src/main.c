@@ -1,8 +1,8 @@
 #include "main.h"
 
-static void debug(uint8_t value);
+//static void debug(uint8_t value);
 
-PinConfig lcd_config = {
+const PinConfig lcd_config = {
         .port = &LCD_PORT,
         .ddr = &LCD_DDR,
         .rs = 32,
@@ -18,7 +18,9 @@ char right_time_str[9];
 
 TINTREG internal_interrupts;
 volatile uint8_t target_latch;
-volatile uint8_t last_input_state = 0xFF;
+volatile uint8_t last_input_state = 0;
+
+const uint8_t target_config = 1;
 
 int main(void)
 {
@@ -44,7 +46,7 @@ int main(void)
         if(internal_interrupts.reg) timer_internal_ISR();
         //if(tb_map.vars.external_interrupts.reg) timer_external_ISR();
         if((tb_map.vars.time & 0x8) && (PCMSK == TIMER_STATUS_RUNNING)) update_target_time();
-	}
+    }
 
     return 0;
 }
@@ -65,8 +67,8 @@ void display_init()
 
 void update_target_time()
 {
-    if(target_latch & TIMER_PIN_LEFT) sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
-    if(target_latch & TIMER_PIN_RIGHT) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
+    if(!tb_map.vars.status.bit.left_down) sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
+    if(!tb_map.vars.status.bit.right_down) sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.time / 6000), (uint16_t)((tb_map.vars.time / 100) % 60), (uint16_t)(tb_map.vars.time % 100));
 
     LCD_set_cursor(0, 3);
     LCD_write_string(left_time_str);
@@ -121,7 +123,7 @@ void timer_internal_ISR()
 
         sprintf(left_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.left_time / 6000), (uint16_t)((tb_map.vars.left_time / 100) % 60), (uint16_t)(tb_map.vars.left_time % 100));
 
-        if (PCMSK == TIMER_STATUS_STOPPED) update_target_time();
+        if(PCMSK == TIMER_STATUS_STOPPED) update_target_time();
         if(!internal_interrupts.reg) return;
     }
     if(internal_interrupts.bit.right_down)
@@ -130,45 +132,45 @@ void timer_internal_ISR()
 
         sprintf(right_time_str, "%02d:%02d:%02d", (uint16_t)(tb_map.vars.right_time / 6000), (uint16_t)((tb_map.vars.right_time / 100) % 60), (uint16_t)(tb_map.vars.right_time % 100));
 
-        if (PCMSK == TIMER_STATUS_STOPPED) update_target_time();
+        if(PCMSK == TIMER_STATUS_STOPPED) update_target_time();
         //if(!internal_interrupts.reg) return;
     }
 }
 
 void timer_external_ISR()
 {
-    if(tb_map.vars.external_interrupts.bit.start && PCMSK == TIMER_STATUS_STOPPED)
+    if(tb_map.vars.external_interrupts.bit.start && (PCMSK == TIMER_STATUS_STOPPED))
     {
         tb_map.vars.external_interrupts.bit.start = 0;
         timer_start();
 
         if(!tb_map.vars.external_interrupts.reg) return;
     }
-    if(tb_map.vars.external_interrupts.bit.stop && PCMSK == TIMER_STATUS_RUNNING)
+    if(tb_map.vars.external_interrupts.bit.stop && (PCMSK == TIMER_STATUS_RUNNING))
     {
         tb_map.vars.external_interrupts.bit.stop = 0;
         timer_stop();
 
         if(!tb_map.vars.external_interrupts.reg) return;
     }
-    if(tb_map.vars.external_interrupts.bit.reset && PCMSK == TIMER_STATUS_STOPPED)
+    if(tb_map.vars.external_interrupts.bit.reset && (PCMSK == TIMER_STATUS_STOPPED))
     {
         tb_map.vars.external_interrupts.bit.reset = 0;
         timer_reset();
 
         if(!tb_map.vars.external_interrupts.reg) return;
     }
-    if(tb_map.vars.external_interrupts.bit.left_down && EIMSK & TIMER_PIN_LEFT)
+    if(tb_map.vars.external_interrupts.bit.left_down && (EIMSK & TIMER_PIN_EXINT0))
     {
         tb_map.vars.external_interrupts.bit.left_down = 0;
-        timer_left_down();
+        timer_exint0();
 
         if(!tb_map.vars.external_interrupts.reg) return;
     }
-    if(tb_map.vars.external_interrupts.bit.right_down && EIMSK & TIMER_PIN_LEFT)
+    if(tb_map.vars.external_interrupts.bit.right_down && (EIMSK & TIMER_PIN_EXINT0))
     {
         tb_map.vars.external_interrupts.bit.right_down = 0;
-        timer_right_down();
+        timer_exint1();
 
         //if(!tb_map.vars.external_interrupts.reg) return;
     }
@@ -180,10 +182,11 @@ void timer_init()
     //EICRA = 1 << ISC01 | 1 << ISC00 | 1 << ISC11 | 1 << ISC10; //Rising edge
     EICRA = 1 << ISC01 | 1 << ISC11; //Falling edge
     EIMSK = 0;
+    target_latch = TIMER_EXINTS;
 
 	//CONTROL PINS:
-	CONTROL_DDR = (uint8_t )~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | (TIMER_TARGETS << 2));
-	CONTROL_PORT = TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | (TIMER_TARGETS << 2);
+	CONTROL_DDR = (uint8_t)~(TIMER_PIN_START | TIMER_PIN_STOP | TIMER_PIN_RESET | (TIMER_EXINTS << 2));
+	CONTROL_PORT = TIMER_EXINTS << 2;
 
 	//TIMER:
     //10ms: Prescaler = 1024 | OCR0A = 155
@@ -194,38 +197,37 @@ void timer_init()
 	
 	//INTERRUPTS:
 	PCICR = (1 << PCIE2);//enable pin change interrupt 2
-
 	PCMSK = TIMER_STATUS_STOPPED;
-    target_latch = TIMER_TARGETS;
 }
 
-inline void timer_start()
+void timer_start()
 {
-    PCMSK = TIMER_STATUS_RUNNING;
+    EIFR = TIMER_EXINTS;//clear external interrupt flags
     EIMSK = target_latch;
+    PCMSK = TIMER_STATUS_RUNNING;
     internal_interrupts.bit.start = 1;
     tb_map.vars.status.bit.running = 1;
 
-	//enable compare match interrupt
+    //enable compare match interrupt
 	TIMSK0 |= (1<<OCIE0A);
 }
 
-inline void timer_stop()
+void timer_stop()
 {
     PCMSK = TIMER_STATUS_STOPPED;
     EIMSK = 0;
     internal_interrupts.bit.stop = 1;
     tb_map.vars.status.bit.running = 0;
 
-	//disable compare match interrupt
+    //disable compare match interrupt
 	TIMSK0 &= ~(1<<OCIE0A);
 }
 
-inline void timer_reset()
+void timer_reset()
 {
-    if(!(CONTROL_PIN & (TIMER_PIN_LEFT << 2)) && !(CONTROL_PIN & (TIMER_PIN_RIGHT << 2)))
+    if((CONTROL_PIN & (TIMER_PIN_EXINT0 << 2)) && (CONTROL_PIN & (TIMER_PIN_EXINT1 << 2)))
     {
-        target_latch = TIMER_TARGETS;
+        target_latch = TIMER_EXINTS;
         internal_interrupts.bit.reset = 1;
         tb_map.vars.time = 0;
 	    tb_map.vars.right_time = 0;
@@ -238,37 +240,53 @@ inline void timer_reset()
     }
 }
 
-void timer_left_down()
+void timer_exint0()
 {
-    //if(PCMSK == TIMER_STATUS_STOPPED) return; //TODO FIX EIMSK!!!!
-
-    EIMSK &= ~TIMER_PIN_LEFT;
+    EIMSK &= ~TIMER_PIN_EXINT0;
     target_latch = EIMSK;
-    tb_map.vars.left_time = tb_map.vars.time;
-    internal_interrupts.bit.left_down = 1;
-    tb_map.vars.status.bit.left_down = 1;
 
-    if(EIMSK == 0) timer_stop();
+    if(target_config)
+    {
+        tb_map.vars.right_time = tb_map.vars.time;
+        internal_interrupts.bit.right_down = 1;
+        tb_map.vars.status.bit.right_down = 1;
+    }
+    else
+    {
+        tb_map.vars.left_time = tb_map.vars.time;
+        internal_interrupts.bit.left_down = 1;
+        tb_map.vars.status.bit.left_down = 1;
+    }
+
+   if(target_latch == 0) timer_stop();
 }
 
-void timer_right_down()
+void timer_exint1()
 {
-    //if(PCMSK == TIMER_STATUS_STOPPED) return; //TODO FIX EIMSK!!!!
-
-    EIMSK &= ~TIMER_PIN_RIGHT;
+    EIMSK &= ~TIMER_PIN_EXINT1;
     target_latch = EIMSK;
-    tb_map.vars.right_time = tb_map.vars.time;
-    internal_interrupts.bit.right_down = 1;
-    tb_map.vars.status.bit.right_down = 1;
 
-    if(EIMSK == 0) timer_stop();
+    if (target_config)
+    {
+        tb_map.vars.left_time = tb_map.vars.time;
+        internal_interrupts.bit.left_down = 1;
+        tb_map.vars.status.bit.left_down = 1;
+    }
+    else
+    {
+        tb_map.vars.right_time = tb_map.vars.time;
+        internal_interrupts.bit.right_down = 1;
+        tb_map.vars.status.bit.right_down = 1;
+    }
+
+   if(target_latch == 0) timer_stop();
 }
 
 ISR(PCINT2_vect)
 {
     //PCMSK holds valid pins for current internal_interrupts
     //Invert PIN because pullup
-	switch ((CONTROL_PIN & PCMSK) & last_input_state)
+	switch ((CONTROL_PIN & PCMSK) & ~last_input_state)
 	{
         case TIMER_PIN_START:
             timer_start();
@@ -282,30 +300,33 @@ ISR(PCINT2_vect)
 			timer_reset();
 			break;
 
-		default: break;
+		default:
+            break;
 	}
 
-    last_input_state = ~(CONTROL_PIN & PCMSK);
+    last_input_state = (CONTROL_PIN & PCMSK);
+}
+
+ISR(INT0_vect)
+{
+    timer_exint0();
+}
+
+ISR(INT1_vect)
+{
+    timer_exint1();
 }
 
 ISR(TIMER0_COMPA_vect)
 {
-	tb_map.vars.time++;
+    tb_map.vars.time++;
 }
 
-ISR(LEFT_INT)
-{
-    timer_left_down();
-}
-
-ISR(RIGHT_INT)
-{
-    timer_right_down();
-}
-
+/*
 static void debug(uint8_t value)
 {
-    char str[3];
-    sprintf(str, "%x|", value);
+    char str[2];
+    sprintf(str, "%x", value);
     LCD_write_string(str);
 }
+ */

@@ -79,7 +79,7 @@ typedef union {
 }TBMAP;
 
 //VARIABLES
-TBMAP tb_map;
+volatile TBMAP tb_map;
 
 void tb_init();
 void tb_service();
